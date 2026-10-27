@@ -4,7 +4,9 @@ Hungría se compone de módulos independientes (ver [ADR 0001](../adr/0001-modul
 
 | Módulo | Estado | Responsabilidad |
 |---|---|---|
-| [Atención al cliente](atencion-cliente.md) | fase 1, diseño | Recorrido del cliente: espera, mesa, pedido, servicio, cuenta, feedback |
+| [Atención al cliente](atencion-cliente.md) | fase 1, diseño | Sesión de mesa, grupos, pedido, servicio, cierre |
+| Pagos y comprobantes | planeado | Cobro por grupo, pagos por fuera, boletas y facturas (ver [pagos](../pagos-y-comprobantes.md)) |
+| Cuenta de cliente | planeado, futuro | Perfil opcional, destino de comprobantes, historial de visitas |
 | Cocina | planeado | Recibir comandas, tiempos de preparación, estaciones |
 | Personal | planeado | Turnos, asignación de mesas/zonas, comunicación interna |
 | Inventario | planeado | Existencias, consumo por plato, disponibilidad del menú |
@@ -19,5 +21,8 @@ flowchart LR
     AC -->|consumo| IN[Inventario]
     IN -->|disponibilidad del menú| AC
     PE[Personal] -->|asignación de zonas| AC
-    AC -->|alertas de llamado| PE
+    AC -->|llamados y alertas| PE
+    AC -->|cargos y pagos por fuera| PA[Pagos y comprobantes]
+    PA -->|pago confirmado, comprobante| AC
+    PA -->|comprobantes| CC[Cuenta de cliente]
 ```

@@ -15,3 +15,8 @@ La documentación se mantiene en dos lugares: este repo y el second brain (`~/br
 ## Consecuencias
 - Si hay conflicto, gana el repo y se corrige la nota del brain.
 - Cambios de flujos o módulos se hacen en el repo; el brain se actualiza solo si cambia una decisión o aparece un gotcha.
+
+## Hospedaje del repo
+- 2026-10-26: el repo se aloja en GitHub como **público** (`milkmantree/hungria`), de forma temporal, porque trabajan dos personas y no se quiere pagar por un repo privado.
+- Más adelante se migrará a un Forgejo propio; entonces el repo público se hará privado o se eliminará.
+- Al ser público, **nunca** se versionan secretos, claves NFC ni datos personales.

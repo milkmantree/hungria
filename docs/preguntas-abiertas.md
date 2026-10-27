@@ -1,22 +1,29 @@
 # Preguntas abiertas
 
-Pendientes a resolver con el usuario antes de fijar detalles de los flujos.
+Pendientes por resolver antes de fijar detalles. Lo ya decidido está en [sesión de mesa](sesion-de-mesa.md), [modos de servicio](modos-de-servicio.md) y los [ADR](adr/).
 
-## Negocio
-- ¿Tipo de restaurante (casual, fine dining, comida rápida, café) y tamaño (mesas, personal por turno)?
-- ¿Ya existe un restaurante piloto o es genérico?
-- ¿Reservaciones, solo walk-in, o ambos?
-
-## Operación
-- ¿Quién toma el pedido hoy: mesero, cliente por QR, o mixto según el caso?
-- ¿Política ante alergias y restricciones dietéticas?
-- ¿Propinas: cómo se gestionan y reparten?
+## Sesión y grupos
+- ¿Cuánto tiempo puede estar inactiva una sesión antes de cerrarse sola?
+- ¿Cuántos grupos y usuarios máximo por mesa?
+- ¿Qué pasa con una mesa unida o dividida mientras hay una sesión abierta?
+- ¿Cómo se maneja a menores de edad (consentimiento, pedido de alcohol)?
 
 ## Pagos y legal
-- ¿Medios de pago locales requeridos y facturación fiscal aplicable?
-- ¿Requisitos de privacidad/consentimiento de datos del cliente?
+- ¿Medios de pago locales requeridos y pasarela?
+- ¿Facturación fiscal aplicable (boleta/factura, país, requisitos de emisión)?
+- ¿Política de reembolsos cuando el mesero cancela o edita un pedido ya pagado?
+- ¿Propinas: cómo se piden, se reparten y se dividen por grupo?
+- ¿Requisitos de privacidad y consentimiento para correo y cuenta de cliente?
 
-## Tecnología e IoT
-- ¿Hardware disponible o preferido (tablets, impresoras de comanda, beepers, sensores de mesa)?
-- ¿Conectividad del local y tolerancia a fallas de red?
+## Experiencia
+- ¿Primero PWA (web) y la app después, o ambas desde el inicio?
+- ¿Idioma(s) de la interfaz del cliente?
+- ¿Qué información ve el mesero de cada grupo y cuántas alertas es razonable?
+
+## Operación y tecnología
+- ¿Qué modo de servicio usará el primer restaurante piloto?
+- ¿Salvaguarda opcional de aviso al mesero para pedidos Directo por QR: activada por defecto?
+- ¿Cómo opera la sesión sin red (cola local, comanda en papel) y cómo se reconcilia?
+- ¿Hardware de cocina (pantalla vs impresora) y de pago (POS existente)?
+- ¿Cómo se programan, rotan y reponen las claves de los stickers NFC?
 - ¿Integración con un POS existente?

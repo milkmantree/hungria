@@ -1,44 +1,55 @@
 # 02 — Mesa y pedido
 
 ## Objetivo
-Que el cliente pida sin esperas ni errores, con las alergias siempre atendidas, y que el mesero invierta su tiempo en recomendar, no en anotar.
+Que cada grupo arme su pedido con autonomía, sin errores y con las alergias siempre revisadas, y que el mesero use su tiempo en recomendar, no en anotar. El camino depende del [modo de servicio](../modos-de-servicio.md).
 
 ## Actores
-Cliente, mesero, cocina, sistema.
+Titular, invitados vinculados, mesero, cocina, sistema.
 
 ## Diagrama
 ```mermaid
 flowchart TD
-    A[Cliente en mesa] --> B[🤝 Mesero da la bienvenida y pregunta alergias]
-    B --> C{¿Cómo pide?}
-    C -- por QR/pantalla --> D[⚙️ Cliente arma pedido]
-    C -- con mesero --> E[🤝 Mesero toma pedido en dispositivo]
-    D --> F[🤝 Mesero revisa alergias y notas]
+    A[Sesión abierta] --> B[⚙️ Carta completa con búsqueda]
+    B --> C[Titular arma pedido]
+    C --> D{¿Pide por invitados?}
+    D -- sí --> E[Titular acepta explícitamente a cada invitado]
+    D -- no --> F[Pedido del grupo]
     E --> F
-    F --> G[⚙️ Enviar comanda a cocina]
-    G --> H[⚙️ Confirmar al cliente]
+    F --> G{¿Modo?}
+    G -- Directo --> H[⚙️ Pago en la app]
+    H --> I[⚙️ Pedido confirmado y enviado a cocina]
+    G -- Acompañado --> J[⚙️ Aviso al mesero]
+    J --> K[🤝 Mesero se acerca y confirma o edita]
+    K --> I
+    I --> L[⚙️ Confirmación al grupo]
+    M[🤝 Mesero puede editar en cualquier momento] -.-> F
 ```
 
 ## Qué automatiza la tecnología
-- Menú digital con disponibilidad actualizada (ítems agotados ocultos). (R3)
-- Captura del pedido por el cliente o el mesero y envío directo a cocina sin transcripción. (R3, R4)
-- Confirmación del pedido al cliente. (R4)
+- Carta completa con búsqueda, disponibilidad actualizada y filtros. (R4)
+- Pedido por grupo, con invitados vinculados cargados a la cuenta del titular. (R3, R5)
+- **Directo:** el pago confirma el pedido y lo envía a cocina. (R6)
+- **Acompañado:** aviso al mesero cuando el grupo está listo. (R7)
+- Si el QR abrió la sesión, la confirmación (pago o mesero) es la barrera. (R1)
 
 ## Dónde el humano es obligatorio
-- Bienvenida, recomendaciones y consulta de alergias.
-- Revisión humana de todo pedido con alergias o notas antes de enviarlo. (R3)
-- Atender al cliente que prefiere pedir hablando. (R9)
+- Revisar alergias y notas antes de que el pedido avance, en ambos modos. (R5)
+- Confirmar el pedido en modo Acompañado y recomendar. (R7)
+- Editar pedidos cuando haga falta; el mesero puede hacerlo siempre. (R8)
+- Atender a quien prefiere pedir hablando. (R16)
+- El titular debe aceptar a cada invitado de forma explícita; no es automático. (R3)
 
 ## Señales digitales / IoT
-- QR o pantalla de mesa; dispositivo del mesero; impresora o pantalla en cocina.
+- Interfaz web o app de la sesión; dispositivo del mesero; pantalla o impresora de cocina.
 
 ## Fallas y excepciones
-- Sin red: comanda en papel, reconciliación posterior. (R8)
+- Sin red: comanda en papel y reconciliación posterior. (R15)
 - Ítem agotado después de pedir: el mesero avisa y propone alternativa.
-- Pedido ambiguo: cocina devuelve consulta al mesero, no al cliente.
+- Pedido por QR sospechoso en Directo: aviso opcional al mesero de la zona; puede cancelar y el pago se reembolsa. (R1)
+- Pedido ambiguo: cocina consulta al mesero, no al cliente.
 
 ## Métricas de calidad
-Tiempo hasta primer contacto, errores de comanda, incidentes de alergias (meta: cero), proporción de pedidos por cada canal.
+Tiempo hasta el primer pedido, errores de comanda, incidentes de alergias (meta: cero), edición de pedidos por mesero, proporción de pedidos por modo.
 
 ## Módulos que toca
-Atención al cliente; Cocina (comanda); Inventario (disponibilidad).
+Atención al cliente; Cocina (comanda); Inventario (disponibilidad); Pagos y comprobantes (modo Directo).
