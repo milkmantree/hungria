@@ -1,29 +1,40 @@
 # Preguntas abiertas
 
-Pendientes por resolver antes de fijar detalles. Lo ya decidido está en [sesión de mesa](sesion-de-mesa.md), [modos de servicio](modos-de-servicio.md) y los [ADR](adr/).
-
-## Sesión y grupos
-- ¿Cuánto tiempo puede estar inactiva una sesión antes de cerrarse sola?
-- ¿Cuántos grupos y usuarios máximo por mesa?
-- ¿Qué pasa con una mesa unida o dividida mientras hay una sesión abierta?
-- ¿Cómo se maneja a menores de edad (consentimiento, pedido de alcohol)?
+Pendientes por resolver antes de fijar detalles. Lo ya decidido está en [sesión de mesa](sesion-de-mesa.md), [modos de servicio](modos-de-servicio.md), [pagos y comprobantes](pagos-y-comprobantes.md) y los [ADR](adr/).
 
 ## Pagos y legal
-- ¿Medios de pago locales requeridos y pasarela?
-- ¿Facturación fiscal aplicable (boleta/factura, país, requisitos de emisión)?
-- ¿Política de reembolsos cuando el mesero cancela o edita un pedido ya pagado?
-- ¿Propinas: cómo se piden, se reparten y se dividen por grupo?
-- ¿Requisitos de privacidad y consentimiento para correo y cuenta de cliente?
-
-## Experiencia
-- ¿Primero PWA (web) y la app después, o ambas desde el inicio?
-- ¿Idioma(s) de la interfaz del cliente?
-- ¿Qué información ve el mesero de cada grupo y cuántas alertas es razonable?
+- ¿Qué pasarela usa el restaurante piloto? Define el primer adaptador. Candidatas: Culqi, Izipay, Niubiz, Mercado Pago. Falta confirmar cuáles soportan Apple Pay y Google Pay.
+- ¿Qué proveedor PSE/OSE se usa para emitir comprobantes?
+- ¿Cómo se reparte la propina entre el personal? (módulo Personal)
+- Privacidad: ya se decidió cumplir la Ley 29733 y su reglamento. Falta definir cómo: textos de consentimiento, registro del banco de datos y plazos de conservación.
 
 ## Operación y tecnología
-- ¿Qué modo de servicio usará el primer restaurante piloto?
-- ¿Salvaguarda opcional de aviso al mesero para pedidos Directo por QR: activada por defecto?
-- ¿Cómo opera la sesión sin red (cola local, comanda en papel) y cómo se reconcilia?
-- ¿Hardware de cocina (pantalla vs impresora) y de pago (POS existente)?
 - ¿Cómo se programan, rotan y reponen las claves de los stickers NFC?
-- ¿Integración con un POS existente?
+- ¿Qué sistema de caja usa el piloto y tiene API o importación de ventas?
+- ¿Quién emite los comprobantes en el piloto: Hungría o el sistema de caja?
+
+## Para el módulo Personal
+- ¿Qué información ve el mesero de cada grupo y cuántas alertas es razonable? El contrato con atención al cliente (llamados y alertas por mesa o zona) ya está en [atencion-cliente.md](modulos/atencion-cliente.md).
+
+## Resueltas
+Ver [ADR 0005](adr/0005-piloto-peru-pagos-y-comprobantes.md) y [ADR 0006](adr/0006-operacion-sin-red.md).
+
+2026-11-05:
+- Modo del piloto: ambos, configurable.
+- País: Perú; comprobantes SUNAT vía PSE/OSE, boleta por defecto y factura con RUC desde la PWA.
+- Interfaz: solo PWA, en español e inglés.
+- Medios de pago: tarjetas, Yape, Plin, Apple Pay y Google Pay.
+- Propinas: sugeridas por grupo al pagar, 10% por defecto y editable.
+- Reembolsos: saldo a favor en la sesión; lo que sobre se reembolsa al medio original al cerrar.
+- Inactividad: cierre automático a los 30 min, si todo está liquidado o no hubo consumo.
+- Unir o dividir mesas: el mesero fusiona o mueve sesiones.
+- Alcohol: autodeclaración en la PWA.
+- Aviso al mesero en pedidos Directo por QR: activado por defecto.
+- Cocina: pantalla (KDS) con impresora de respaldo.
+- Sin red: router 4G de respaldo, papel y reconciliación posterior.
+- Grupos y usuarios por sesión: sin límite por defecto, ajustable por restaurante.
+- Privacidad: cumplir la Ley 29733 y su reglamento.
+
+2026-11-06:
+- Sistema de caja: Hungría le envía las ventas liquidadas, en un solo sentido ([ADR 0007](adr/0007-ventas-al-sistema-de-caja.md)).
+- Pasarela: cada restaurante conecta su propia cuenta con API en una pasarela que opere en Perú ([ADR 0008](adr/0008-pasarela-propia-de-cada-restaurante.md)).

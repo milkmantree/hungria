@@ -14,7 +14,7 @@ Modelo central del módulo de atención al cliente. Decisión: [ADR 0003](adr/00
 No hay un titular único de mesa: una sesión puede tener varios grupos.
 
 ## Identidad
-Cada usuario recibe un nombre anónimo de animal (gato, chancho, perro, ballena, cocodrilo...) que es visible para los demás de la sesión. No se pide registro para usar la sesión. La interfaz es web (y/o app, si el cliente la tiene).
+Cada usuario recibe un nombre anónimo de animal (gato, chancho, perro, ballena, cocodrilo...) que es visible para los demás de la sesión. No se pide registro para usar la sesión. La interfaz es una PWA en español e inglés; no hay app nativa en esta fase.
 
 ## Reglas
 1. **Vincular es explícito.** El titular acepta a cada invitado de forma individual y consciente; ver quién se acepta es parte de la interfaz. Evita que un actor malicioso se cuelgue de una cuenta.
@@ -24,6 +24,9 @@ Cada usuario recibe un nombre anónimo de animal (gato, chancho, perro, ballena,
 5. **El mesero puede editar los pedidos de la mesa en cualquier momento**, en ambos [modos de servicio](modos-de-servicio.md), y puede expulsar a un participante.
 6. **Se puede añadir comida en cualquier momento.** Cada adición genera un nuevo flujo de pago según el modo.
 7. **Cada grupo se liquida por su cuenta** y puede irse cuando quiera.
+8. **Cierre por inactividad:** tras **30 minutos** sin actividad, la sesión se cierra sola si todos sus grupos están liquidados o si no hubo consumo. Con cuentas pendientes no se cierra; se avisa al mesero.
+9. **Sin límite de grupos ni usuarios** por sesión por defecto. El restaurante puede fijar un máximo por configuración.
+10. **Unir y dividir mesas:** al unir, el mesero fusiona las sesiones: una absorbe a la otra y los grupos se conservan. Al dividir, el mesero mueve grupos a la sesión de la otra mesa.
 
 ## Estados de la sesión
 ```mermaid
@@ -34,6 +37,8 @@ stateDiagram-v2
     Liquidando --> Abierta: otros grupos siguen consumiendo
     Liquidando --> Cerrada: se liquida el último grupo
     Abierta --> Cerrada: mesero cierra (sin consumo)
+    Abierta --> Cerrada: 30 min inactiva, todo liquidado o sin consumo
+    Abierta --> [*]: mesero la fusiona con otra sesión
     Cerrada --> PorLimpiar
     PorLimpiar --> [*]: mesa libre
 ```
@@ -53,4 +58,4 @@ stateDiagram-v2
 La sesión cierra cuando se liquida el **último** grupo; la mesa pasa a "por limpiar" y luego a libre. Se emite un comprobante **por grupo** ([pagos y comprobantes](pagos-y-comprobantes.md)).
 
 ## Qué toca el mesero
-Ver todos los grupos de su zona, confirmar pedidos (modo Acompañado), editar, mover ítems entre grupos, registrar pagos por fuera y expulsar participantes. La tecnología nunca elimina esta vía humana.
+Ver todos los grupos de su zona, confirmar pedidos (modo Acompañado), editar, mover ítems entre grupos, registrar pagos por fuera, expulsar participantes y fusionar o dividir sesiones al unir o separar mesas. La tecnología nunca elimina esta vía humana.

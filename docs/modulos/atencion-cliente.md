@@ -20,23 +20,28 @@ Estado: fase 1, diseño. Cubre el recorrido completo del cliente en torno a la [
 | R5 | Pedido por grupo; alergias y notas siempre revisadas por una persona antes de avanzar | 02, 03 |
 | R6 | Modo Directo: el pago confirma el pedido y lo envía a cocina; cada adición genera un nuevo pago | 02, 04 |
 | R7 | Modo Acompañado: aviso al mesero, confirmación humana, pago al final | 02, 04 |
-| R8 | El mesero edita pedidos en todo momento, gestiona participantes (expulsar) y resuelve reembolsos | 01–05 |
+| R8 | El mesero edita pedidos en todo momento, gestiona participantes (expulsar) y fusiona o divide sesiones al unir o separar mesas | 01–05 |
 | R9 | Adiciones en cualquier momento y llamado al mesero con motivo | 03 |
 | R10 | Plato compartido cargado a un solo grupo; el mesero puede reasignar | 03 |
 | R11 | Pago por fuera siempre disponible; el mesero registra qué quedó pagado; el grupo pasa a modo Acompañado | 04 |
-| R12 | Comprobante (boleta o factura) por grupo, enviado a la cuenta, al correo o impreso | 05 |
+| R12 | Comprobante SUNAT por grupo vía PSE/OSE: boleta por defecto, factura con RUC; enviado a la cuenta, al correo o impreso | 05 |
 | R13 | Cerrar la sesión al liquidarse el último grupo; mesa a "por limpiar" | 05 |
 | R14 | Feedback breve y opcional; las quejas las atiende una persona | 05 |
-| R15 | Operar sin red: comanda en papel y cobro manual, reconciliar después | todos |
+| R15 | Operar sin red: router 4G de respaldo; si no basta, comanda en papel y cobro manual, y el mesero lo registra después ([ADR 0006](../adr/0006-operacion-sin-red.md)) | todos |
 | R16 | Toda acción digital tiene una vía humana equivalente | todos |
+| R17 | PWA en español e inglés, sin instalar nada | todos |
+| R18 | Cancelar o editar un pedido ya pagado genera saldo a favor del grupo; lo que sobre al cerrar se reembolsa al medio original | 02, 04, 05 |
+| R19 | Pago digital con tarjetas, Yape, Plin, Apple Pay y Google Pay; propina sugerida y editable por grupo | 04 |
+| R20 | Autodeclaración de mayoría de edad para pedir alcohol; el mesero verifica si tiene dudas | 02 |
+| R21 | Cierre automático de la sesión tras 30 min inactiva, si todo está liquidado o no hubo consumo | 05 |
 
 ## Contratos con otros módulos (a definir)
 | Con | Atención al cliente envía | Atención al cliente recibe |
 |---|---|---|
-| Cocina | comanda (ítems, notas, alergias, mesa, grupo) | estado por plato (recibido, en preparación, listo) |
+| Cocina | comanda (ítems, notas, alergias, mesa, grupo) a pantalla (KDS) e impresora | estado por plato (recibido, en preparación, listo) |
 | Inventario | consumo por ítem vendido | disponibilidad del menú (ítems agotados) |
 | Personal | llamados y alertas por mesa/zona | asignación de mesas/zonas por turno |
-| Pagos y comprobantes | cargo por grupo, pagos por fuera registrados por el mesero | confirmación de pago, comprobante emitido |
+| Pagos y comprobantes | cargo por grupo, propina, RUC si pide factura, pagos por fuera registrados por el mesero, ajustes que generan saldo a favor | confirmación de pago, saldo del grupo, reembolso hecho, comprobante emitido |
 | Cuenta de cliente (futuro) | identidad opcional del cliente, destino de comprobantes | historial de visitas |
 
 ## Preguntas abiertas

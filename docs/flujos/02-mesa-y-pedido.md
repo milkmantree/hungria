@@ -31,6 +31,8 @@ flowchart TD
 - **Directo:** el pago confirma el pedido y lo envía a cocina. (R6)
 - **Acompañado:** aviso al mesero cuando el grupo está listo. (R7)
 - Si el QR abrió la sesión, la confirmación (pago o mesero) es la barrera. (R1)
+- Carta y textos en español e inglés. (R17)
+- Autodeclaración de mayoría de edad al pedir alcohol. (R20)
 
 ## Dónde el humano es obligatorio
 - Revisar alergias y notas antes de que el pedido avance, en ambos modos. (R5)
@@ -40,12 +42,13 @@ flowchart TD
 - El titular debe aceptar a cada invitado de forma explícita; no es automático. (R3)
 
 ## Señales digitales / IoT
-- Interfaz web o app de la sesión; dispositivo del mesero; pantalla o impresora de cocina.
+- PWA de la sesión; dispositivo del mesero; pantalla de cocina (KDS) con impresora de comandas de respaldo.
 
 ## Fallas y excepciones
-- Sin red: comanda en papel y reconciliación posterior. (R15)
-- Ítem agotado después de pedir: el mesero avisa y propone alternativa.
-- Pedido por QR sospechoso en Directo: aviso opcional al mesero de la zona; puede cancelar y el pago se reembolsa. (R1)
+- Sin red: router 4G de respaldo; si no basta, comanda en papel y reconciliación posterior. (R15)
+- Ítem agotado después de pedir: el mesero avisa y propone alternativa; en Directo el monto queda como saldo a favor. (R18)
+- Pedido por QR en Directo: aviso al mesero de la zona (activado por defecto); puede cancelar y el monto queda como saldo a favor. (R1, R18)
+- Dudas sobre la edad al pedir alcohol: el mesero verifica al entregar y puede cancelar el ítem. (R20)
 - Pedido ambiguo: cocina consulta al mesero, no al cliente.
 
 ## Métricas de calidad

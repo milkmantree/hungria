@@ -23,9 +23,13 @@ Cada restaurante elige el modo según la atención que quiera dar. Hay dos; el p
 ## Entrada por QR
 El QR es más débil que el NFC ([acceso a la mesa](acceso-a-la-mesa.md)). Su protección es la confirmación: en Directo, el pedido no sale sin pago; en Acompañado, no sale sin el mesero.
 
-Salvaguarda opcional por restaurante: en Directo vía QR, avisar al mesero de la zona de cada pedido nuevo. Es visibilidad, no aprobación; el mesero puede cancelar o editar y el pago se reembolsa.
+Salvaguarda por restaurante, **activada por defecto**: en Directo vía QR, avisar al mesero de la zona de cada pedido nuevo. Es visibilidad, no aprobación; el mesero puede cancelar o editar y el monto queda como saldo a favor del grupo ([pagos](pagos-y-comprobantes.md)). El restaurante puede apagarla.
+
+## Alcohol y menores de edad
+Para pedir alcohol, el cliente **autodeclara en la PWA** que es mayor de 18 años. El mesero verifica al entregar si tiene dudas y puede cancelar el ítem.
 
 ## Cómo elegir
 - **Directo** si prima la rapidez, hay poco personal o el local es de ritmo alto.
 - **Acompañado** si el restaurante vende trato cercano o recomendación del mesero.
+- El piloto soporta ambos modos ([ADR 0005](adr/0005-piloto-peru-pagos-y-comprobantes.md)).
 - El modo es configuración del restaurante; cambiarlo no debe requerir cambios en el resto de los módulos.

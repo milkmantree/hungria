@@ -51,4 +51,4 @@ sequenceDiagram
 
 ## Qué hacer si falla
 - Sticker dañado o sin lectura: usar el QR o pedir al mesero (vía humana siempre disponible).
-- Sin red: el flujo cae a pedido con el mesero (ver [flujos](flujos/README.md)).
+- Sin red: la validación NFC depende del servidor; si cae, el flujo pasa a pedido con el mesero ([ADR 0006](adr/0006-operacion-sin-red.md)).

@@ -9,7 +9,8 @@ Titular, mesero, sistema, encargado.
 ## Diagrama
 ```mermaid
 flowchart TD
-    A[Grupo liquidado] --> B[⚙️ Generar boleta o factura del grupo]
+    A[Grupo liquidado] --> R[⚙️ Reembolsar saldo a favor, si queda]
+    R --> B[⚙️ Emitir boleta, o factura con RUC, vía PSE/OSE]
     B --> C{¿Destino?}
     C -- cuenta en la app --> D[⚙️ Enviar a la cuenta]
     C -- correo --> E[⚙️ Enviar al correo]
@@ -29,7 +30,9 @@ flowchart TD
 ```
 
 ## Qué automatiza la tecnología
-- Boleta o factura **por grupo**, generada al liquidarse. (R12)
+- Boleta o factura **por grupo**, emitida por un PSE/OSE al liquidarse; factura si el cliente ingresó su RUC. (R12)
+- Reembolso automático del saldo a favor que quede al cerrar el grupo. (R18)
+- Cierre automático de la sesión tras 30 min inactiva, si todo está liquidado o no hubo consumo. (R21)
 - Envío a la cuenta del cliente (si está inscrito), a su correo, o impresión, según indique. (R12)
 - Cierre de la sesión cuando se liquida el último grupo y paso de la mesa a "por limpiar". (R13)
 - Invitación breve y opcional a dejar feedback; alerta inmediata si es negativo. (R14)
@@ -48,7 +51,9 @@ flowchart TD
 - Correo inválido o inscripción pendiente: el mesero ofrece alternativa (impreso). (R12)
 - Cliente no quiere opinar: no se insiste. (R16)
 - Un grupo se va y otro sigue: la sesión permanece abierta hasta el último. (R13)
-- Sin red: comprobante impreso manual y envío digital al reconectar. (R15)
+- Sin red: comprobante impreso manual y emisión electrónica al reconectar. (R15)
+- RUC inválido: se emite boleta o el mesero corrige los datos. (R12)
+- Falla el reembolso del saldo: alerta al encargado para devolverlo por otra vía. (R18)
 
 ## Métricas de calidad
 Tiempo de entrega de comprobante, tasa de respuesta de feedback, tiempo de contacto ante una queja, tiempo de rotación de mesa.

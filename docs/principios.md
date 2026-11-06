@@ -10,7 +10,7 @@
 8. **Invisible cuando funciona.** El cliente no debería tener que aprender nada; el personal ve lo que necesita en el momento justo.
 9. **El personal es usuario de primera clase.** Cada flujo se diseña también para quien sirve; si le estorba, está mal. El mesero puede corregir cualquier pedido.
 10. **Modular y con contratos.** Cada módulo expone y consume interfaces explícitas; ninguno depende de los internos de otro (ver [ADR 0001](adr/0001-modularidad.md)).
-11. **Datos mínimos.** Se recoge solo lo necesario, con consentimiento claro para datos del cliente; el uso de la sesión es anónimo por defecto.
+11. **Datos mínimos.** Se recoge solo lo necesario, con consentimiento claro para datos del cliente; el uso de la sesión es anónimo por defecto. Todo tratamiento de datos personales cumple la ley vigente del país; en Perú, la Ley 29733 y su reglamento.
 12. **Medible.** Cada flujo define métricas de calidad (tiempos, errores, satisfacción) para saber si la tecnología ayuda.
 
 ## Prueba de decisión

@@ -29,5 +29,5 @@ Cada archivo contiene, en este orden:
 ## Convenciones
 - Mermaid para diagramas; un flujo por archivo; nombres `NN-kebab-case.md` sin acentos.
 - Los pasos con ⚙️ son automáticos, los marcados con 🤝 son humanos obligatorios.
-- Las referencias a requisitos usan los códigos R1..R16 de [atencion-cliente.md](../modulos/atencion-cliente.md).
+- Las referencias a requisitos usan los códigos R1..R21 de [atencion-cliente.md](../modulos/atencion-cliente.md).
 - Todo flujo debe indicar qué pasa en modo Directo y en modo Acompañado, y cómo funciona el pago por fuera.

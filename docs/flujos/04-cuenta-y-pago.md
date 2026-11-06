@@ -30,6 +30,9 @@ flowchart TD
 - **Directo:** el cobro ocurre en cada pedido; al final no queda nada por pagar salvo adiciones. (R6)
 - **Acompañado:** pago digital de la cuenta al final de la visita del grupo. (R7)
 - Pago por grupo, independiente de los demás. (R3)
+- Medios: tarjetas, Yape, Plin, Apple Pay y Google Pay. (R19)
+- Propina sugerida y editable por grupo al pagar. (R19)
+- Saldo a favor aplicado a los siguientes pedidos del grupo. (R18)
 
 ## Dónde el humano es obligatorio
 - **Pago por fuera siempre disponible:** el cliente llama al mesero, pagan por POS o efectivo y el mesero registra qué quedó pagado. (R11)
@@ -37,16 +40,16 @@ flowchart TD
 - Despedida personal; el pago digital no elimina el cierre humano. (R16)
 
 ## Señales digitales / IoT
-- Pago en la app, terminal POS externo, impresora de comprobante.
+- Pago en la PWA vía pasarela, terminal POS externo, impresora de comprobante.
 
 ## Fallas y excepciones
 - Pago rechazado: el mesero ofrece alternativa con discreción. (R11)
 - Sin red: cobro manual y registro posterior. (R15)
-- Pedido cancelado por el mesero después de pagado en Directo: se reembolsa. (R8)
+- Pedido cancelado o editado por el mesero después de pagado en Directo: queda como saldo a favor; lo que sobre al cerrar se reembolsa al medio original. (R18)
 - Grupo que cambia de decisión (de digital a físico): se pasa a modo Acompañado sin perder lo ya pagado. (R11)
 
 ## Métricas de calidad
 Tiempo desde pedir pagar hasta liquidar, errores de cobro, uso de cada medio, proporción de pagos por fuera, reembolsos.
 
 ## Módulos que toca
-Atención al cliente; Pagos y comprobantes; Inventario (consumo cerrado); Personal (propinas, por definir).
+Atención al cliente; Pagos y comprobantes; Inventario (consumo cerrado); Personal (reparto de propinas, por definir).
