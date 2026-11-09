@@ -16,7 +16,7 @@ Fase 1 — diseño de los flujos de atención al cliente para un restaurante cas
   - [Modos de servicio](docs/modos-de-servicio.md) (Directo y Acompañado)
   - [Acceso a la mesa](docs/acceso-a-la-mesa.md) (NFC con SDM y QR)
   - [Pagos y comprobantes](docs/pagos-y-comprobantes.md)
-- [Módulos](docs/modulos/README.md) · [Dependencias y degradación](docs/modulos/dependencias.md) · [Atención al cliente](docs/modulos/atencion-cliente.md)
+- [Módulos](docs/modulos/README.md): [Núcleo](docs/modulos/nucleo.md) · [Sala](docs/modulos/sala.md) · [Mesa digital](docs/modulos/mesa-digital.md) · [Dependencias y degradación](docs/modulos/dependencias.md) · [Requisitos](docs/modulos/requisitos.md)
 - [Flujos](docs/flujos/README.md)
   1. [Llegada y acceso](docs/flujos/01-llegada-y-acceso.md)
   2. [Mesa y pedido](docs/flujos/02-mesa-y-pedido.md)

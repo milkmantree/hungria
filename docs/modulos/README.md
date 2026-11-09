@@ -15,6 +15,7 @@ flowchart TB
     SC --> P[Pagos y comprobantes]
     SC --> PE[Personal]
     SC --> I[Inventario]
+    SC --> R[Recepción y reservas]
     P --> CC[Cuenta de cliente]
     SC -.->|cuentas cerradas| CJ[(Sistema de caja externo)]
 ```
@@ -22,16 +23,17 @@ flowchart TB
 ## Catálogo
 | Módulo | Estado | Responsabilidad | Requiere |
 |---|---|---|---|
-| Núcleo | fase 1, diseño | Restaurante y locales, mesas y zonas, carta, usuarios y roles, licencia, reportes básicos, auditoría, automatizaciones | — |
-| Sala | fase 1, diseño | Operación del mesero: sesión de mesa, toma de pedidos, cuenta, pago por fuera, envío de cuentas cerradas al sistema de caja | Núcleo, Cocina |
+| [Núcleo](nucleo.md) | fase 1, diseño | Restaurante y locales, mesas y zonas, carta, usuarios y roles, licencia, reportes básicos, auditoría, automatizaciones | — |
+| [Sala](sala.md) | fase 1, diseño | Operación del mesero: sesión de mesa, toma de pedidos, cuenta, pago por fuera, envío de cuentas cerradas al sistema de caja | Núcleo, Cocina |
 | Cocina | planeado | Comandas en pantalla (KDS) e impresora, estados por plato, estaciones | Núcleo, Sala |
-| Mesa digital | fase 1, diseño | PWA del cliente, acceso NFC/QR, grupos, modos Directo y Acompañado | Sala (Pagos para modo Directo) |
+| [Mesa digital](mesa-digital.md) | fase 1, diseño | PWA del cliente, acceso NFC/QR, grupos, modos Directo y Acompañado, feedback | Sala (Pagos para modo Directo) |
+| Recepción y reservas | planeado | Lista de espera; reservas más adelante | Sala |
 | Pagos y comprobantes | fase 1, diseño | Pasarela del restaurante, QR o link de pago del mesero, comprobantes SUNAT, saldo a favor, propinas ([pagos](../pagos-y-comprobantes.md)) | Sala |
 | Personal | planeado | Turnos, asignación de zonas, alertas al mesero, reparto de propinas | Sala |
 | Inventario | planeado | Existencias, consumo por plato, disponibilidad de la carta | Sala |
 | Cuenta de cliente | futuro | Perfil opcional, destino de comprobantes, historial de visitas | Pagos, Mesa digital |
 
-Hoy Sala y Mesa digital están documentados juntos en [atencion-cliente.md](atencion-cliente.md); se separarán en el paso de reorganización. Los módulos planeados no tienen documento propio hasta que se aborden.
+Los módulos planeados no tienen documento propio hasta que se aborden; sus contratos con Sala están en [sala.md](sala.md). Requisitos de todos los módulos: [requisitos](requisitos.md).
 
 ## Paquetes
 Todos incluyen el Núcleo. A cualquier paquete se le pueden sumar módulos extra si cumplen sus dependencias.
@@ -57,5 +59,7 @@ flowchart LR
     PA -->|pago confirmado, comprobante| S
     PA -->|comprobantes| CC[Cuenta de cliente]
     S -->|cuentas cerradas| CJ[(Sistema de caja externo)]
+    RR[Recepción y reservas] -->|grupo asignado a mesa| S
+    S -->|mesa por liberarse| RR
 ```
 Qué necesita cada módulo y qué pasa cuando falta un opcional: [dependencias y degradación](dependencias.md).

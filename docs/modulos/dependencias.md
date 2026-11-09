@@ -12,12 +12,13 @@ Qué necesita cada módulo, qué módulos aprovecha si están activos y qué hac
 ## Matriz
 | Módulo | Requiere | Opcionales |
 |---|---|---|
-| Sala | Cocina | Mesa digital, Pagos, Personal, Inventario |
+| Sala | Cocina | Mesa digital, Pagos, Personal, Inventario, Recepción y reservas |
 | Cocina | Sala | Inventario, Personal |
 | Mesa digital | Sala | Pagos, Personal, Inventario, Cuenta de cliente |
 | Pagos y comprobantes | Sala | Mesa digital, Personal, Cuenta de cliente |
 | Personal | Sala | Pagos |
 | Inventario | Sala | — |
+| Recepción y reservas | Sala | — |
 | Cuenta de cliente | Pagos, Mesa digital | — |
 
 ```mermaid
@@ -27,6 +28,7 @@ flowchart LR
     P[Pagos] -->|requiere| S
     PE[Personal] -->|requiere| S
     I[Inventario] -->|requiere| S
+    RR[Recepción y reservas] -->|requiere| S
     CC[Cuenta de cliente] -->|requiere| P
     CC -->|requiere| MD
 ```
@@ -40,6 +42,7 @@ flowchart LR
 | Pagos | Solo pago por fuera, que el mesero registra. Hungría **no emite comprobantes**; el restaurante los emite con su sistema actual. No hay saldo a favor ni propina sugerida. |
 | Personal | Los llamados y alertas llegan a **todos los meseros del local**. No hay asignación por zona ni turno. |
 | Inventario | La disponibilidad de la carta la marca el personal a mano (ítem agotado o disponible, en el Núcleo). |
+| Recepción y reservas | No hay lista de espera digital; el anfitrión la lleva a mano y asigna la mesa en Sala. |
 
 Sala **siempre** envía al sistema de caja cada cuenta cerrada, tenga o no Pagos ([ADR 0007](../adr/0007-ventas-al-sistema-de-caja.md)). Si Pagos está activo, el envío incluye el comprobante emitido.
 
@@ -69,7 +72,7 @@ Sala **siempre** envía al sistema de caja cada cuenta cerrada, tenga o no Pagos
 |---|---|
 | Pagos | Solo reparte las propinas que el mesero registra a mano en los pagos por fuera. |
 
-### Inventario y Cuenta de cliente
+### Inventario, Recepción y reservas, Cuenta de cliente
 No tienen opcionales.
 
 ## Resumen por paquete

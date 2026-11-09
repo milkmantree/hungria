@@ -28,7 +28,7 @@ flowchart TD
 ```
 
 ## Qué automatiza la tecnología
-- Registro del grupo, estimación de espera y aviso al cliente. (R15)
+- Registro del grupo, estimación de espera y aviso al cliente, si el local tiene Recepción y reservas. (R22)
 - Apertura de la sesión por NFC con validación de firma, o por QR. (R1)
 - Asignación de nombre de animal anónimo y creación del grupo. (R2)
 - Solicitud de unión de quien llega a una mesa ya abierta; el grupo decide. (R3)
@@ -52,4 +52,4 @@ flowchart TD
 Tiempo de espera real vs. estimado, tiempo hasta el saludo, proporción de aperturas por NFC vs. QR, aperturas rechazadas.
 
 ## Módulos que toca
-Atención al cliente; Personal (zonas asignadas).
+Sala; Mesa digital (NFC/QR, grupos); Recepción y reservas (lista de espera); Personal (zonas asignadas).

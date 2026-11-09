@@ -33,6 +33,8 @@ flowchart TD
 - Medios: tarjetas, Yape, Plin, Apple Pay y Google Pay. (R19)
 - Propina sugerida y editable por grupo al pagar. (R19)
 - Saldo a favor aplicado a los siguientes pedidos del grupo. (R18)
+- Sin Mesa digital: el mesero genera un QR o link de pago para el grupo. (R23)
+- Cada cuenta cerrada se envía al sistema de caja del restaurante. (R24)
 
 ## Dónde el humano es obligatorio
 - **Pago por fuera siempre disponible:** el cliente llama al mesero, pagan por POS o efectivo y el mesero registra qué quedó pagado. (R11)
@@ -52,4 +54,4 @@ flowchart TD
 Tiempo desde pedir pagar hasta liquidar, errores de cobro, uso de cada medio, proporción de pagos por fuera, reembolsos.
 
 ## Módulos que toca
-Atención al cliente; Pagos y comprobantes; Inventario (consumo cerrado); Personal (reparto de propinas, por definir).
+Sala (cuenta, pago por fuera, envío al sistema de caja); Mesa digital (pago en la PWA); Pagos y comprobantes; Inventario (consumo cerrado); Personal (reparto de propinas).

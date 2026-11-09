@@ -38,4 +38,5 @@
 | Módulo extra | Módulo que se suma a un paquete, si cumple sus dependencias. |
 | Sala | Módulo de operación del mesero. |
 | Mesa digital | Módulo de autoservicio del cliente en la mesa (PWA, NFC/QR). |
+| Recepción y reservas | Módulo de lista de espera y, más adelante, reservas. |
 | Contrato | Interfaz (eventos/datos) que un módulo expone o consume. |

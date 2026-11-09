@@ -48,4 +48,4 @@ flowchart TD
 Tiempo de respuesta a llamados, tiempo plato listo → mesa, adiciones por visita, quejas durante el servicio.
 
 ## Módulos que toca
-Atención al cliente; Cocina (estados); Personal (zonas y alertas); Pagos y comprobantes (adiciones).
+Sala (entrega, llamados, reasignación); Mesa digital (botón de llamado, adiciones en la PWA); Cocina (estados); Personal (zonas y alertas); Pagos y comprobantes (adiciones en Directo).

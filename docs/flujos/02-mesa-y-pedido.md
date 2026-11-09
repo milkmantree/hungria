@@ -55,4 +55,4 @@ flowchart TD
 Tiempo hasta el primer pedido, errores de comanda, incidentes de alergias (meta: cero), edición de pedidos por mesero, proporción de pedidos por modo.
 
 ## Módulos que toca
-Atención al cliente; Cocina (comanda); Inventario (disponibilidad); Pagos y comprobantes (modo Directo).
+Sala (pedido, revisión de alergias, confirmación); Mesa digital (carta y pedido en la PWA); Núcleo (carta); Cocina (comanda); Inventario (disponibilidad); Pagos y comprobantes (modo Directo).

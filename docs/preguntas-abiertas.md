@@ -18,7 +18,7 @@ Pendientes por resolver antes de fijar detalles. Lo ya decidido está en [sesió
 - ¿Se puede cambiar de paquete en cualquier momento o solo al renovar?
 
 ## Para el módulo Personal
-- ¿Qué información ve el mesero de cada grupo y cuántas alertas es razonable? El contrato con atención al cliente (llamados y alertas por mesa o zona) ya está en [atencion-cliente.md](modulos/atencion-cliente.md).
+- ¿Qué información ve el mesero de cada grupo y cuántas alertas es razonable? El contrato con Sala (llamados y alertas por mesa o zona) ya está en [sala.md](modulos/sala.md).
 
 ## Resueltas
 Ver [ADR 0005](adr/0005-piloto-peru-pagos-y-comprobantes.md) y [ADR 0006](adr/0006-operacion-sin-red.md).
@@ -48,6 +48,7 @@ Ver [ADR 0005](adr/0005-piloto-peru-pagos-y-comprobantes.md) y [ADR 0006](adr/00
 - Licencia por local; varios locales por restaurante desde el diseño.
 - Venta por paquetes con módulos extra.
 - Atención al cliente se divide en Sala y Mesa digital; Sala y Cocina siempre juntos.
+- Lista de espera: nuevo módulo Recepción y reservas. Feedback: Mesa digital. Requisitos con códigos estables en [requisitos.md](modulos/requisitos.md).
 - Mesa digital sin Pagos solo en modo Acompañado.
 - Sin Pagos, el comprobante lo emite el sistema actual del restaurante.
 - El envío al sistema de caja lo hace Sala, con o sin Pagos.
