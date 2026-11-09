@@ -39,4 +39,6 @@
 | Sala | Módulo de operación del mesero. |
 | Mesa digital | Módulo de autoservicio del cliente en la mesa (PWA, NFC/QR). |
 | Recepción y reservas | Módulo de lista de espera y, más adelante, reservas. |
-| Contrato | Interfaz (eventos/datos) que un módulo expone o consume. |
+| Contrato | Interfaz (eventos y comandos) que un módulo expone o consume. |
+| Evento | Mensaje "pasó algo" que publica un módulo; puede no tener oyentes. Ver [eventos](modulos/eventos.md). |
+| Comando | Mensaje "haz esto" dirigido a un módulo activo, que responde con el resultado. |

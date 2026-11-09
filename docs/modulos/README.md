@@ -63,3 +63,4 @@ flowchart LR
     S -->|mesa por liberarse| RR
 ```
 Qué necesita cada módulo y qué pasa cuando falta un opcional: [dependencias y degradación](dependencias.md).
+Mensajes entre módulos: [eventos y comandos](eventos.md).

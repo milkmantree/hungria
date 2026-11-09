@@ -55,3 +55,7 @@ Ver [ADR 0005](adr/0005-piloto-peru-pagos-y-comprobantes.md) y [ADR 0006](adr/00
 - Pagos sin Mesa digital: el mesero genera un QR o link de pago.
 - Sin Personal, los llamados y alertas llegan a todos los meseros del local.
 - Detalle: [dependencias y degradación](modulos/dependencias.md).
+
+2026-11-09 ([ADR 0010](adr/0010-eventos-y-comandos.md)):
+- Eventos y comandos entre módulos; nombres `modulo.entidad.verbo` en inglés.
+- Eventos con datos mínimos y sin datos personales; entrega al menos una vez con ID único.
