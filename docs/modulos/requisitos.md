@@ -31,14 +31,22 @@ Lista única de requisitos, con el módulo responsable de cada uno. Los códigos
 | R25 | Un ítem se puede cancelar solo hasta que la cocina lo empieza; desde ahí se cobra. Con solo impresora, la comanda impresa cuenta como en preparación | Sala, Cocina | 02, 03 |
 | R26 | Un llamado sin respuesta se escala al encargado a los 3 min (configurable por local) | Sala | 03 |
 | R27 | Alerta de plato demorado al superar un tiempo fijo por local (configurable) | Cocina | 03 |
+| R28 | Opciones de plato obligatorias y extras con precio; la comanda lleva las opciones elegidas | Núcleo (carta), Cocina (comanda) | 02 |
+| R29 | Cartas por horario y horario de atención por local | Núcleo | 02 |
+| R30 | Precios de la carta con IGV incluido; sin recargo al consumo | Núcleo | 02, 04 |
+| R31 | Descuentos del mesero con límite por local; cortesías del encargado (incluye rehacer un plato por error del local); siempre con motivo y auditoría | Sala | 03, 04 |
+| R32 | Notificaciones al cliente por correo y SMS con plantillas | Núcleo | 05 |
+| R33 | Acceso de soporte autorizado por el restaurante, por tiempo limitado, auditado y sin datos de pago | Núcleo | — |
+| R34 | Feedback privado; con buena nota, invitación a reseñar en Google | Mesa digital | 05 |
+| R35 | Reservas online: asignación de mesa, anticipación mínima, tiempo de estadía, cancelación y confirmación | Recepción y reservas | 01 |
 
 ## Por módulo
 | Módulo | Requisitos |
 |---|---|
-| [Núcleo](nucleo.md) | R4 (carta), R17 (traducciones) |
-| [Sala](sala.md) | R2, R5, R7, R8, R9, R10, R11, R13, R21, R24, R25, R26 |
-| [Mesa digital](mesa-digital.md) | R1, R2, R3, R4 (búsqueda), R6, R7, R9, R14, R17, R20 |
+| [Núcleo](nucleo.md) | R4 (carta), R17 (traducciones), R28, R29, R30, R32, R33 |
+| [Sala](sala.md) | R2, R5, R7, R8, R9, R10, R11, R13, R21, R24, R25, R26, R31 |
+| [Mesa digital](mesa-digital.md) | R1, R2, R3, R4 (búsqueda), R6, R7, R9, R14, R17, R20, R34 |
 | [Pagos y comprobantes](../pagos-y-comprobantes.md) | R12, R18, R19, R23 |
-| Cocina | R4 (estados), R25, R27 |
-| Recepción y reservas | R22 |
+| Cocina | R4 (estados), R25, R27, R28 (comanda) |
+| Recepción y reservas | R22, R35 |
 | Todos | R15, R16 |

@@ -13,7 +13,12 @@ Pendientes por resolver antes de fijar detalles. Lo ya decidido está en [sesió
 - ¿Quién emite los comprobantes en el piloto: Hungría o el sistema de caja?
 
 ## Sala y Cocina
-- Si el error es del local (plato frío o equivocado) y el ítem ya estaba en preparación, ¿se rehace sin costo o se cobra igual? ¿Quién lo autoriza?
+- ¿Cuál es el límite por defecto de los descuentos del mesero?
+
+## Nuevos módulos y canales
+- ¿Con qué apps de delivery se integra primero (Rappi, PedidosYa) y qué permiten sus API?
+- ¿Qué proveedor de SMS se usa?
+- Reservas: ¿se pide garantía o depósito? ¿Qué pasa si el cliente no llega?
 
 ## Licencias y módulos
 - ¿Qué pasa con los datos de un módulo cuando el local lo desactiva (se conservan, se ocultan, se exportan)?
@@ -71,3 +76,9 @@ Ver [ADR 0005](adr/0005-piloto-peru-pagos-y-comprobantes.md) y [ADR 0006](adr/00
 2026-11-09 ([ADR 0011](adr/0011-claves-nfc.md)):
 - Claves NFC derivadas por sticker desde una clave maestra por restaurante, guardada en un KMS.
 - Hungría programa los stickers; si uno falla, se desactiva y se reemplaza, sin rotación periódica.
+
+2026-11-09 ([ADR 0012](adr/0012-alcance-frente-a-tastyigniter.md), comparativa con TastyIgniter):
+- Error del local con un ítem en preparación: cortesía del encargado.
+- Opciones y extras de plato, cartas por horario, IGV incluido sin recargo.
+- Módulos extra nuevos: Para llevar, Delivery por apps, Cupones y promociones, Reportes avanzados.
+- Reservas online en la fase 1; feedback privado; notificaciones por correo y SMS; sin API pública; soporte con acceso autorizado.

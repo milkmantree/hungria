@@ -10,10 +10,10 @@ Estado: fase 1, diseño. Autoservicio del cliente en la mesa. Requiere Sala; con
 - **Carta con búsqueda** y armado del pedido del grupo; autodeclaración de edad para alcohol.
 - **Modos de servicio:** Directo (pago en la PWA, requiere Pagos) y Acompañado (aviso al mesero).
 - **Botón de llamado** al mesero con motivo.
-- **Feedback** breve y opcional al cerrar el grupo; alerta al encargado si es negativo.
+- **Feedback** privado, breve y opcional al cerrar el grupo; alerta al encargado si es negativo e invitación a dejar una reseña en Google si es bueno.
 
 ## Requisitos
-R1, R2, R3, R4 (búsqueda), R6, R7, R9, R14, R17, R20. Ver [requisitos](requisitos.md).
+R1, R2, R3, R4 (búsqueda), R6, R7, R9, R14, R17, R20, R34. Ver [requisitos](requisitos.md).
 
 ## Contratos
 | Con | Mesa digital envía | Mesa digital recibe |

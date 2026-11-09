@@ -19,6 +19,10 @@ Qué necesita cada módulo, qué módulos aprovecha si están activos y qué hac
 | Personal | Sala | Pagos |
 | Inventario | Sala | — |
 | Recepción y reservas | Sala | — |
+| Para llevar | Sala | Pagos |
+| Delivery por apps | Sala | Inventario |
+| Cupones y promociones | Sala | Pagos, Mesa digital |
+| Reportes avanzados | — | todos |
 | Cuenta de cliente | Pagos, Mesa digital | — |
 
 ```mermaid
@@ -71,6 +75,15 @@ Sala **siempre** envía al sistema de caja cada cuenta cerrada, tenga o no Pagos
 | Sin | Qué pasa |
 |---|---|
 | Pagos | Solo reparte las propinas que el mesero registra a mano en los pagos por fuera. |
+
+### Módulos extra
+| Módulo | Sin | Qué pasa |
+|---|---|---|
+| Para llevar | Pagos | El cliente paga al recoger, por fuera. |
+| Delivery por apps | Inventario | La disponibilidad no se sincroniza sola con las apps; el personal la marca a mano en cada app. |
+| Cupones y promociones | Mesa digital | El mesero aplica el cupón en Sala. |
+| Cupones y promociones | Pagos | El descuento se refleja en la cuenta y se cobra por fuera. |
+| Reportes avanzados | cualquier módulo | Solo muestra indicadores de los módulos activos. |
 
 ### Inventario, Recepción y reservas, Cuenta de cliente
 No tienen opcionales.

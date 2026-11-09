@@ -12,7 +12,7 @@ Restaurante casual de 10 a 20 mesas en **Perú**. El cliente usa una **PWA** en 
 ## Alcance por fases
 | Fase | Foco | Estado |
 |---|---|---|
-| 1 | Núcleo, licencias y flujos de Sala y Mesa digital (diseño) | en curso |
+| 1 | Núcleo, licencias, flujos de Sala y Mesa digital, y reservas (diseño) | en curso |
 | 2+ | Módulos: pagos, cocina, personal, inventario, cuenta de cliente | planeado |
 
 ## Fase 1: alcance

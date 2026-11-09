@@ -10,10 +10,11 @@ Estado: fase 1, diseño. Operación del mesero. Siempre se activa junto con Coci
 - Editar pedidos, mover ítems entre grupos, reasignar platos compartidos y expulsar participantes.
 - Recibir **llamados** y alertas (a todos los meseros del local, o por zona si está Personal).
 - Llevar la **cuenta** de cada grupo y registrar **pagos por fuera**.
+- **Descuentos del mesero** (con límite por local) y **cortesías del encargado**, con motivo.
 - Enviar cada **cuenta cerrada al sistema de caja** del restaurante.
 
 ## Requisitos
-R2, R5, R7, R8, R9, R10, R11, R13, R21, R24. Ver [requisitos](requisitos.md).
+R2, R5, R7, R8, R9, R10, R11, R13, R21, R24, R25, R26, R31. Ver [requisitos](requisitos.md).
 
 ## Contratos
 | Con | Sala envía | Sala recibe |

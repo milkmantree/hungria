@@ -22,6 +22,10 @@
 | NFC / SDM | Sticker NFC que genera una URL única y firmada en cada lectura (Secure Dynamic Messaging). Ver [acceso a la mesa](acceso-a-la-mesa.md). |
 | Comanda | Pedido enviado a cocina/barra, con ítems, notas y alergias. |
 | Ítem | Producto del menú dentro de un pedido. |
+| Opción de plato | Elección obligatoria de un ítem (por ejemplo el punto del lomo). |
+| Extra | Agregado opcional de un ítem, con precio. |
+| Cortesía | Ítem regalado o rehecho sin costo por decisión del encargado, con motivo. |
+| Para llevar | Pedido que el cliente recoge en el local. |
 | Plato compartido | Ítem pedido para varios, cargado a un solo grupo. |
 | Cuenta | Total consumido por un grupo. |
 | Comprobante | Boleta (por defecto) o factura (con RUC) electrónica de SUNAT, emitida por grupo al liquidarse. |

@@ -54,6 +54,7 @@ Todo mensaje lleva:
 | `floor.call.answered` | `call_id`, `waiter_id` | tableside, staff |
 | `floor.call.escalated` | `call_id`, `table_id`, `minutes_open` | staff |
 | `floor.alert.raised` | `alert_id`, `kind` (call_unanswered, dish_delayed, qr_direct_order), `table_id` | staff |
+| `floor.discount.applied` | `group_id`, `item_id` (opcional), `kind` (discount, courtesy), `amount`, `approved_by` | payments, staff |
 | `floor.offline_payment.recorded` | `group_id`, `amount`, `tip`, `method` (cash, card_terminal, other) | payments, staff |
 | `floor.bill.closed` | `group_id`, `session_id`, `total`, `tip`, `receipt_id` (si lo hay) | inventory, customer, adaptador del sistema de caja |
 
