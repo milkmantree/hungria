@@ -1,7 +1,7 @@
 # Visión
 
 ## Objetivo a largo plazo
-Ofrecer herramientas digitales y de IoT para gestionar un restaurante de punta a punta, construidas como módulos independientes que se pueden adoptar por separado y componer entre sí.
+Ofrecer herramientas digitales y de IoT para gestionar un restaurante de punta a punta, construidas como módulos independientes que se pueden adoptar por separado y componer entre sí. Cada local activa los módulos de su licencia sobre un Núcleo común ([ADR 0009](adr/0009-licencias-y-activacion-de-modulos.md)).
 
 ## Propuesta de valor
 Apalancar la tecnología lo máximo posible **sin poner en jaque la calidad de la atención**. Medimos la tecnología por el tiempo y la atención que devuelve al personal para el trato humano, no por cuánto reemplaza.
@@ -12,7 +12,7 @@ Restaurante casual de 10 a 20 mesas en **Perú**. El cliente usa una **PWA** en 
 ## Alcance por fases
 | Fase | Foco | Estado |
 |---|---|---|
-| 1 | Flujos de atención al cliente (diseño) | en curso |
+| 1 | Núcleo, licencias y flujos de Sala y Mesa digital (diseño) | en curso |
 | 2+ | Módulos: pagos, cocina, personal, inventario, cuenta de cliente | planeado |
 
 ## Fase 1: alcance

@@ -6,4 +6,4 @@ Brain vault folder: `hungria` (dual-register). Leer `~/brain/hungria/AI/hungria.
 - Docs en español; código e identificadores técnicos en inglés. Archivos en kebab-case sin acentos.
 - Diagramas en Mermaid. Un flujo por archivo, plantilla en `docs/flujos/README.md`.
 - Sin secretos, credenciales ni IPs en el repo.
-- Fase actual: 1 — diseño de flujos de atención al cliente (sin código).
+- Fase actual: 1 — diseño del Núcleo, licencias y flujos de Sala y Mesa digital (sin código). Ver `docs/modulos/README.md`.

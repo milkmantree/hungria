@@ -13,6 +13,10 @@ Pendientes por resolver antes de fijar detalles. Lo ya decidido está en [sesió
 - ¿Qué sistema de caja usa el piloto y tiene API o importación de ventas?
 - ¿Quién emite los comprobantes en el piloto: Hungría o el sistema de caja?
 
+## Licencias y módulos
+- ¿Qué pasa con los datos de un módulo cuando el local lo desactiva (se conservan, se ocultan, se exportan)?
+- ¿Se puede cambiar de paquete en cualquier momento o solo al renovar?
+
 ## Para el módulo Personal
 - ¿Qué información ve el mesero de cada grupo y cuántas alertas es razonable? El contrato con atención al cliente (llamados y alertas por mesa o zona) ya está en [atencion-cliente.md](modulos/atencion-cliente.md).
 
@@ -38,3 +42,10 @@ Ver [ADR 0005](adr/0005-piloto-peru-pagos-y-comprobantes.md) y [ADR 0006](adr/00
 2026-11-06:
 - Sistema de caja: Hungría le envía las ventas liquidadas, en un solo sentido ([ADR 0007](adr/0007-ventas-al-sistema-de-caja.md)).
 - Pasarela: cada restaurante conecta su propia cuenta con API en una pasarela que opere en Perú ([ADR 0008](adr/0008-pasarela-propia-de-cada-restaurante.md)).
+
+2026-11-09 ([ADR 0009](adr/0009-licencias-y-activacion-de-modulos.md)):
+- Núcleo siempre activo, con reportes básicos, auditoría y automatizaciones.
+- Licencia por local; varios locales por restaurante desde el diseño.
+- Venta por paquetes con módulos extra.
+- Atención al cliente se divide en Sala y Mesa digital; Sala y Cocina siempre juntos.
+- Mesa digital sin Pagos solo en modo Acompañado.

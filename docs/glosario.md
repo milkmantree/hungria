@@ -31,5 +31,11 @@
 | Cocina | Zona de preparación (parte trasera). |
 | Vía humana | Alternativa atendida por una persona a cualquier paso digital. |
 | Degradación elegante | Continuar operando con medios manuales cuando falla la tecnología. |
-| Módulo | Unidad funcional independiente de Hungría con contratos explícitos. |
+| Módulo | Unidad funcional independiente de Hungría con contratos explícitos; se activa por local según la licencia. |
+| Núcleo | Base siempre activa: restaurante y locales, mesas y zonas, carta, usuarios y roles, licencia, reportes básicos, auditoría y automatizaciones. |
+| Licencia | Conjunto de módulos activos en un local. |
+| Paquete | Combinación base de módulos que se vende junta (Mesero, Mesero con cobro, Mesa digital, Completo). |
+| Módulo extra | Módulo que se suma a un paquete, si cumple sus dependencias. |
+| Sala | Módulo de operación del mesero. |
+| Mesa digital | Módulo de autoservicio del cliente en la mesa (PWA, NFC/QR). |
 | Contrato | Interfaz (eventos/datos) que un módulo expone o consume. |

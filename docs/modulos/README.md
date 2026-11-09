@@ -1,29 +1,61 @@
 # Módulos
 
-Hungría se compone de módulos independientes (ver [ADR 0001](../adr/0001-modularidad.md)).
+Hungría tiene un **Núcleo** siempre activo y **módulos** que se activan por local según la licencia ([ADR 0009](../adr/0009-licencias-y-activacion-de-modulos.md)). Los módulos se comunican solo por contratos ([ADR 0001](../adr/0001-modularidad.md)).
 
-| Módulo | Estado | Responsabilidad |
-|---|---|---|
-| [Atención al cliente](atencion-cliente.md) | fase 1, diseño | Sesión de mesa, grupos, pedido, servicio, cierre |
-| Pagos y comprobantes | planeado | Cobro por grupo, pagos por fuera, boletas y facturas, envío de ventas al sistema de caja (ver [pagos](../pagos-y-comprobantes.md)) |
-| Cuenta de cliente | planeado, futuro | Perfil opcional, destino de comprobantes, historial de visitas |
-| Cocina | planeado | Recibir comandas, tiempos de preparación, estaciones |
-| Personal | planeado | Turnos, asignación de mesas/zonas, comunicación interna |
-| Inventario | planeado | Existencias, consumo por plato, disponibilidad del menú |
+## Mapa
+```mermaid
+flowchart TB
+    N[Núcleo — siempre activo<br/>restaurante y locales, mesas y zonas, carta,<br/>usuarios y roles, licencia, reportes básicos,<br/>auditoría, automatizaciones]
+    N --> SC
+    subgraph SC[Siempre juntos]
+        S[Sala — mesero]
+        C[Cocina]
+    end
+    SC --> M[Mesa digital — cliente]
+    SC --> P[Pagos y comprobantes]
+    SC --> PE[Personal]
+    SC --> I[Inventario]
+    P --> CC[Cuenta de cliente]
+    P -.->|ventas liquidadas| CJ[(Sistema de caja externo)]
+```
 
-Los módulos planeados no tienen documento propio hasta que se aborden; sus contratos con atención al cliente están en [atencion-cliente.md](atencion-cliente.md).
+## Catálogo
+| Módulo | Estado | Responsabilidad | Requiere |
+|---|---|---|---|
+| Núcleo | fase 1, diseño | Restaurante y locales, mesas y zonas, carta, usuarios y roles, licencia, reportes básicos, auditoría, automatizaciones | — |
+| Sala | fase 1, diseño | Operación del mesero: sesión de mesa, toma de pedidos, cuenta, pago por fuera | Núcleo, Cocina |
+| Cocina | planeado | Comandas en pantalla (KDS) e impresora, estados por plato, estaciones | Núcleo, Sala |
+| Mesa digital | fase 1, diseño | PWA del cliente, acceso NFC/QR, grupos, modos Directo y Acompañado | Sala (Pagos para modo Directo) |
+| Pagos y comprobantes | fase 1, diseño | Pasarela del restaurante, comprobantes SUNAT, saldo a favor, propinas, envío al sistema de caja ([pagos](../pagos-y-comprobantes.md)) | Sala |
+| Personal | planeado | Turnos, asignación de zonas, alertas al mesero, reparto de propinas | Sala |
+| Inventario | planeado | Existencias, consumo por plato, disponibilidad de la carta | Sala |
+| Cuenta de cliente | futuro | Perfil opcional, destino de comprobantes, historial de visitas | Pagos |
 
-## Dependencias (contratos)
+Hoy Sala y Mesa digital están documentados juntos en [atencion-cliente.md](atencion-cliente.md); se separarán en el paso de reorganización. Los módulos planeados no tienen documento propio hasta que se aborden.
+
+## Paquetes
+Todos incluyen el Núcleo. A cualquier paquete se le pueden sumar módulos extra si cumplen sus dependencias.
+
+| Paquete | Módulos |
+|---|---|
+| Mesero | Sala + Cocina |
+| Mesero con cobro | Mesero + Pagos |
+| Mesa digital | Mesero + Mesa digital + Pagos |
+| Completo | Todos los módulos |
+
+## Contratos entre módulos
 ```mermaid
 flowchart LR
-    AC[Atención al cliente] -->|comandas| CO[Cocina]
-    CO -->|estado del plato| AC
-    AC -->|consumo| IN[Inventario]
-    IN -->|disponibilidad del menú| AC
-    PE[Personal] -->|asignación de zonas| AC
-    AC -->|llamados y alertas| PE
-    AC -->|cargos y pagos por fuera| PA[Pagos y comprobantes]
-    PA -->|pago confirmado, comprobante| AC
+    S[Sala] -->|comandas| CO[Cocina]
+    CO -->|estado del plato| S
+    MD[Mesa digital] -->|pedidos y llamados| S
+    S -->|consumo| IN[Inventario]
+    IN -->|disponibilidad de la carta| S
+    PE[Personal] -->|asignación de zonas| S
+    S -->|llamados y alertas| PE
+    S -->|cargos y pagos por fuera| PA[Pagos y comprobantes]
+    PA -->|pago confirmado, comprobante| S
     PA -->|comprobantes| CC[Cuenta de cliente]
     PA -->|ventas liquidadas| CJ[(Sistema de caja externo)]
 ```
+La matriz detallada de dependencias y el comportamiento sin cada módulo opcional se definen en el paso siguiente.
