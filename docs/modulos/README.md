@@ -16,20 +16,20 @@ flowchart TB
     SC --> PE[Personal]
     SC --> I[Inventario]
     P --> CC[Cuenta de cliente]
-    P -.->|ventas liquidadas| CJ[(Sistema de caja externo)]
+    SC -.->|cuentas cerradas| CJ[(Sistema de caja externo)]
 ```
 
 ## Catálogo
 | Módulo | Estado | Responsabilidad | Requiere |
 |---|---|---|---|
 | Núcleo | fase 1, diseño | Restaurante y locales, mesas y zonas, carta, usuarios y roles, licencia, reportes básicos, auditoría, automatizaciones | — |
-| Sala | fase 1, diseño | Operación del mesero: sesión de mesa, toma de pedidos, cuenta, pago por fuera | Núcleo, Cocina |
+| Sala | fase 1, diseño | Operación del mesero: sesión de mesa, toma de pedidos, cuenta, pago por fuera, envío de cuentas cerradas al sistema de caja | Núcleo, Cocina |
 | Cocina | planeado | Comandas en pantalla (KDS) e impresora, estados por plato, estaciones | Núcleo, Sala |
 | Mesa digital | fase 1, diseño | PWA del cliente, acceso NFC/QR, grupos, modos Directo y Acompañado | Sala (Pagos para modo Directo) |
-| Pagos y comprobantes | fase 1, diseño | Pasarela del restaurante, comprobantes SUNAT, saldo a favor, propinas, envío al sistema de caja ([pagos](../pagos-y-comprobantes.md)) | Sala |
+| Pagos y comprobantes | fase 1, diseño | Pasarela del restaurante, QR o link de pago del mesero, comprobantes SUNAT, saldo a favor, propinas ([pagos](../pagos-y-comprobantes.md)) | Sala |
 | Personal | planeado | Turnos, asignación de zonas, alertas al mesero, reparto de propinas | Sala |
 | Inventario | planeado | Existencias, consumo por plato, disponibilidad de la carta | Sala |
-| Cuenta de cliente | futuro | Perfil opcional, destino de comprobantes, historial de visitas | Pagos |
+| Cuenta de cliente | futuro | Perfil opcional, destino de comprobantes, historial de visitas | Pagos, Mesa digital |
 
 Hoy Sala y Mesa digital están documentados juntos en [atencion-cliente.md](atencion-cliente.md); se separarán en el paso de reorganización. Los módulos planeados no tienen documento propio hasta que se aborden.
 
@@ -56,6 +56,6 @@ flowchart LR
     S -->|cargos y pagos por fuera| PA[Pagos y comprobantes]
     PA -->|pago confirmado, comprobante| S
     PA -->|comprobantes| CC[Cuenta de cliente]
-    PA -->|ventas liquidadas| CJ[(Sistema de caja externo)]
+    S -->|cuentas cerradas| CJ[(Sistema de caja externo)]
 ```
-La matriz detallada de dependencias y el comportamiento sin cada módulo opcional se definen en el paso siguiente.
+Qué necesita cada módulo y qué pasa cuando falta un opcional: [dependencias y degradación](dependencias.md).

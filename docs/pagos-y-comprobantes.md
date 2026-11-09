@@ -52,8 +52,11 @@ El destino lo elige el cliente:
 
 Un comprobante por grupo, no por mesa. Cuando se liquida el último grupo, se cierra la sesión ([sesión de mesa](sesion-de-mesa.md)).
 
+## Cobro sin Mesa digital
+Si el local tiene Pagos pero no Mesa digital, el mesero genera desde su dispositivo un **QR o link de pago** para el grupo y el cliente paga con su celular. Ver [dependencias](modulos/dependencias.md).
+
 ## Envío al sistema de caja
-Cada venta liquidada se envía al sistema de caja del restaurante ([ADR 0007](adr/0007-ventas-al-sistema-de-caja.md)):
+Lo hace el módulo **Sala**, con o sin Pagos: cada cuenta cerrada se envía al sistema de caja del restaurante ([ADR 0007](adr/0007-ventas-al-sistema-de-caja.md)). Con Pagos, el envío incluye el comprobante:
 - Incluye grupo, ítems, montos, propina, medio de pago y comprobante. También los pagos por fuera registrados por el mesero.
 - Va en un solo sentido; el menú no se sincroniza desde la caja en esta fase.
 - **Un solo emisor por venta:** si Hungría emite el comprobante, la caja no lo vuelve a emitir, y viceversa.

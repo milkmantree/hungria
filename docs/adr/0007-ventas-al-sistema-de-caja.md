@@ -17,6 +17,9 @@ Se evaluaron tres caminos: Hungría funciona aparte, Hungría pasa las ventas al
 
 Detalle: [pagos y comprobantes](../pagos-y-comprobantes.md).
 
+## Actualización 2026-11-09
+Con las licencias por módulo ([ADR 0009](0009-licencias-y-activacion-de-modulos.md)), el envío lo hace el módulo **Sala**, tenga o no el local el módulo Pagos. Sin Pagos, Hungría no emite comprobantes: los emite el sistema actual del restaurante, y el envío va sin comprobante.
+
 ## Consecuencias
 - El restaurante tiene sus ventas y su contabilidad en un solo lugar.
 - Depende de que el sistema de caja del piloto tenga API o permita importar ventas. Si no la tiene, la alternativa es exportar las ventas en un archivo para importarlas.

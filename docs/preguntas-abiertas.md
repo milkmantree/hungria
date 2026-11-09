@@ -49,3 +49,8 @@ Ver [ADR 0005](adr/0005-piloto-peru-pagos-y-comprobantes.md) y [ADR 0006](adr/00
 - Venta por paquetes con módulos extra.
 - Atención al cliente se divide en Sala y Mesa digital; Sala y Cocina siempre juntos.
 - Mesa digital sin Pagos solo en modo Acompañado.
+- Sin Pagos, el comprobante lo emite el sistema actual del restaurante.
+- El envío al sistema de caja lo hace Sala, con o sin Pagos.
+- Pagos sin Mesa digital: el mesero genera un QR o link de pago.
+- Sin Personal, los llamados y alertas llegan a todos los meseros del local.
+- Detalle: [dependencias y degradación](modulos/dependencias.md).
