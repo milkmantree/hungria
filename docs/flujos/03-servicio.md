@@ -27,7 +27,7 @@ flowchart TD
 - Seguimiento de estado de cada plato y aviso de "listo" al mesero. (R4)
 - Adiciones en cualquier momento: cada una genera un nuevo flujo de pago (Directo) o se suma a la cuenta (Acompañado). (R9)
 - Llamado al mesero con motivo (duda, problema, cuenta, pagar en físico, otro), ruteado al mesero de la zona. (R9)
-- Alerta si un plato supera el tiempo esperado. (R4)
+- Alerta si un plato supera el tiempo fijo del local. (R27)
 
 ## Dónde el humano es obligatorio
 - Entregar y confirmar el plato correcto, en especial con alergias. (R5)
@@ -39,7 +39,8 @@ flowchart TD
 - Botón de llamado en la sesión, notificación en el dispositivo del mesero, estado de cocina.
 
 ## Fallas y excepciones
-- Llamado sin respuesta: escala al siguiente mesero tras un tiempo. (R9)
+- Llamado sin respuesta: a los 3 min se escala al encargado. (R26)
+- Cancelar un plato que la cocina ya empezó: no se puede; se cobra. (R25)
 - Sin red: el mesero recorre su zona y cocina avisa a voz. (R15)
 - Cliente sin celular o que no quiere usarlo: ronda de mesero normal. (R16)
 - Plato compartido pedido por dos grupos: el sistema pide elegir un solo grupo; el mesero decide si hay duda. (R10)

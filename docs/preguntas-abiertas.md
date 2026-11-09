@@ -9,9 +9,11 @@ Pendientes por resolver antes de fijar detalles. Lo ya decidido está en [sesió
 - Privacidad: ya se decidió cumplir la Ley 29733 y su reglamento. Falta definir cómo: textos de consentimiento, registro del banco de datos y plazos de conservación.
 
 ## Operación y tecnología
-- ¿Cómo se programan, rotan y reponen las claves de los stickers NFC?
 - ¿Qué sistema de caja usa el piloto y tiene API o importación de ventas?
 - ¿Quién emite los comprobantes en el piloto: Hungría o el sistema de caja?
+
+## Sala y Cocina
+- Si el error es del local (plato frío o equivocado) y el ítem ya estaba en preparación, ¿se rehace sin costo o se cobra igual? ¿Quién lo autoriza?
 
 ## Licencias y módulos
 - ¿Qué pasa con los datos de un módulo cuando el local lo desactiva (se conservan, se ocultan, se exportan)?
@@ -59,3 +61,13 @@ Ver [ADR 0005](adr/0005-piloto-peru-pagos-y-comprobantes.md) y [ADR 0006](adr/00
 2026-11-09 ([ADR 0010](adr/0010-eventos-y-comandos.md)):
 - Eventos y comandos entre módulos; nombres `modulo.entidad.verbo` en inglés.
 - Eventos con datos mínimos y sin datos personales; entrega al menos una vez con ID único.
+
+2026-11-09 ([máquinas de estado](modulos/estados.md)):
+- No se cancela un ítem que la cocina ya empezó; se cobra.
+- Llamado sin respuesta: se escala al encargado a los 3 min, configurable.
+- Plato demorado: tiempo fijo por local, configurable.
+- Directo: el grupo que pagó todo queda "al día" y el comprobante se emite al liquidarse.
+
+2026-11-09 ([ADR 0011](adr/0011-claves-nfc.md)):
+- Claves NFC derivadas por sticker desde una clave maestra por restaurante, guardada en un KMS.
+- Hungría programa los stickers; si uno falla, se desactiva y se reemplaza, sin rotación periódica.

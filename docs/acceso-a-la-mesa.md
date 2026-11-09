@@ -19,12 +19,20 @@ No se usa código corto de mesa (descartado).
 - Funciona con la lectura NFC nativa de Android y de iPhone reciente (sin app).
 - El contador es de 24 bits (unos 16 millones de lecturas), suficiente para una mesa.
 
-### Programación de stickers (paso de instalación)
+### Claves ([ADR 0011](adr/0011-claves-nfc.md))
+- Cada sticker tiene una **clave derivada** de la clave maestra del restaurante y del UID del sticker.
+- La **clave maestra** es una por restaurante y vive en un servicio de gestión de claves (KMS) que nunca la deja salir.
+- Nunca se versionan ni se escriben en documentos.
+
+### Programación (la hace Hungría antes de entregar)
 1. Activar SDM: viene **apagado** de fábrica.
 2. Definir el formato de la URL y qué campos se incluyen (UID, contador, firma).
-3. **Cambiar las claves de fábrica** (vienen en ceros) por claves propias, distintas por tag o derivadas del UID. Nunca se versionan ni se escriben en documentos.
-4. Comprobar la lectura con un teléfono y registrar la mesa asociada.
-5. Pegar el sticker. Comprar a un distribuidor fiable: hay clones sin SDM real, y "NTAG 424" sin "DNA" no existe como producto.
+3. **Cambiar las claves de fábrica** (vienen en ceros) por la clave derivada del sticker.
+4. Comprobar la lectura con un teléfono y asociar el sticker a su mesa en el Núcleo.
+5. Enviar al restaurante, que lo pega en la mesa. Comprar a un distribuidor fiable: hay clones sin SDM real, y "NTAG 424" sin "DNA" no existe como producto.
+
+### Reposición
+Si un sticker se daña, se pierde o lo despegan, el encargado lo **desactiva** en el Núcleo y se pide un reemplazo. Mientras llega, la mesa funciona con su QR. Un sticker desactivado se rechaza aunque su firma sea válida. No hay rotación periódica de claves.
 
 ## Secuencia de apertura
 ```mermaid

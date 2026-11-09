@@ -64,3 +64,4 @@ flowchart LR
 ```
 Qué necesita cada módulo y qué pasa cuando falta un opcional: [dependencias y degradación](dependencias.md).
 Mensajes entre módulos: [eventos y comandos](eventos.md).
+Estados de mesa, pedido, ítem y llamado: [máquinas de estado](estados.md).

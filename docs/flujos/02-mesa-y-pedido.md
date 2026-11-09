@@ -22,7 +22,7 @@ flowchart TD
     J --> K[🤝 Mesero se acerca y confirma o edita]
     K --> I
     I --> L[⚙️ Confirmación al grupo]
-    M[🤝 Mesero puede editar en cualquier momento] -.-> F
+    M[🤝 Mesero puede editar hasta que cocina empieza] -.-> F
 ```
 
 ## Qué automatiza la tecnología

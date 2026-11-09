@@ -4,7 +4,7 @@ Estado: fase 1, diseño. Siempre activo en todo local ([ADR 0009](../adr/0009-li
 
 ## Responsabilidades
 - **Restaurante y locales:** datos del restaurante, sus locales y la configuración de cada uno.
-- **Mesas y zonas:** mesas de cada local, sus zonas y su estado (libre, abierta, por limpiar). Los stickers NFC y los QR se asocian a la mesa aquí.
+- **Mesas y zonas:** mesas de cada local, sus zonas y su estado (libre, abierta, por limpiar). Los stickers NFC y los QR se asocian a la mesa aquí; el encargado puede desactivar un sticker ([ADR 0011](../adr/0011-claves-nfc.md)).
 - **Carta:** ítems, precios, categorías, alérgenos, traducciones (español e inglés) y disponibilidad. Sin Inventario, el personal marca a mano los ítems agotados.
 - **Usuarios y roles:** personal del local (encargado, mesero, cocina, anfitrión) y sus permisos.
 - **Licencia:** módulos activos en cada local y validación de sus dependencias ([dependencias](dependencias.md)).

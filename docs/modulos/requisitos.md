@@ -11,7 +11,7 @@ Lista única de requisitos, con el módulo responsable de cada uno. Los códigos
 | R5 | Pedido por grupo; alergias y notas siempre revisadas por una persona antes de avanzar | Sala | 02, 03 |
 | R6 | Modo Directo: el pago confirma el pedido y lo envía a cocina; cada adición genera un nuevo pago | Mesa digital (requiere Pagos) | 02, 04 |
 | R7 | Modo Acompañado: aviso al mesero, confirmación humana, pago al final | Mesa digital (aviso), Sala (confirmación) | 02, 04 |
-| R8 | El mesero edita pedidos en todo momento, gestiona participantes (expulsar) y fusiona o divide sesiones al unir o separar mesas | Sala | 01–05 |
+| R8 | El mesero edita pedidos hasta que la cocina empieza cada ítem (R25), gestiona participantes (expulsar) y fusiona o divide sesiones al unir o separar mesas | Sala | 01–05 |
 | R9 | Adiciones en cualquier momento y llamado al mesero con motivo | Sala (adiciones y recepción del llamado), Mesa digital (botón de llamado) | 03 |
 | R10 | Plato compartido cargado a un solo grupo; el mesero puede reasignar | Sala | 03 |
 | R11 | Pago por fuera siempre disponible; el mesero registra qué quedó pagado; el grupo pasa a modo Acompañado | Sala | 04 |
@@ -28,14 +28,17 @@ Lista única de requisitos, con el módulo responsable de cada uno. Los códigos
 | R22 | Lista de espera: registrar al grupo, estimar la espera y avisar cuando la mesa esté por liberarse | Recepción y reservas | 01 |
 | R23 | Sin Mesa digital, el mesero genera un QR o link de pago para el grupo | Pagos | 04 |
 | R24 | Cada cuenta cerrada se envía al sistema de caja del restaurante, con el comprobante si lo emitió Hungría ([ADR 0007](../adr/0007-ventas-al-sistema-de-caja.md)) | Sala | 04, 05 |
+| R25 | Un ítem se puede cancelar solo hasta que la cocina lo empieza; desde ahí se cobra. Con solo impresora, la comanda impresa cuenta como en preparación | Sala, Cocina | 02, 03 |
+| R26 | Un llamado sin respuesta se escala al encargado a los 3 min (configurable por local) | Sala | 03 |
+| R27 | Alerta de plato demorado al superar un tiempo fijo por local (configurable) | Cocina | 03 |
 
 ## Por módulo
 | Módulo | Requisitos |
 |---|---|
 | [Núcleo](nucleo.md) | R4 (carta), R17 (traducciones) |
-| [Sala](sala.md) | R2, R5, R7, R8, R9, R10, R11, R13, R21, R24 |
+| [Sala](sala.md) | R2, R5, R7, R8, R9, R10, R11, R13, R21, R24, R25, R26 |
 | [Mesa digital](mesa-digital.md) | R1, R2, R3, R4 (búsqueda), R6, R7, R9, R14, R17, R20 |
 | [Pagos y comprobantes](../pagos-y-comprobantes.md) | R12, R18, R19, R23 |
-| Cocina | R4 (estados) |
+| Cocina | R4 (estados), R25, R27 |
 | Recepción y reservas | R22 |
 | Todos | R15, R16 |

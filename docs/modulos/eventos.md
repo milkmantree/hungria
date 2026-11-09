@@ -38,6 +38,7 @@ Todo mensaje lleva:
 | `core.menu_item.availability_changed` | `item_id`, `available` | floor, tableside, kitchen |
 | `core.menu.updated` | `menu_id` | floor, tableside, kitchen, inventory |
 | `core.license.changed` | `active_modules` | todos |
+| `core.nfc_tag.status_changed` | `tag_id`, `table_id`, `active` | tableside |
 
 ### Sala (`floor`)
 | Evento | Datos | Oyentes |
@@ -51,6 +52,7 @@ Todo mensaje lleva:
 | `floor.order.edited` | `order_id`, `changed_item_ids`, `reason` | kitchen, tableside |
 | `floor.order.cancelled` | `order_id`, `reason` | kitchen, tableside, inventory |
 | `floor.call.answered` | `call_id`, `waiter_id` | tableside, staff |
+| `floor.call.escalated` | `call_id`, `table_id`, `minutes_open` | staff |
 | `floor.alert.raised` | `alert_id`, `kind` (call_unanswered, dish_delayed, qr_direct_order), `table_id` | staff |
 | `floor.offline_payment.recorded` | `group_id`, `amount`, `tip`, `method` (cash, card_terminal, other) | payments, staff |
 | `floor.bill.closed` | `group_id`, `session_id`, `total`, `tip`, `receipt_id` (si lo hay) | inventory, customer, adaptador del sistema de caja |
