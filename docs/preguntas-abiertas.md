@@ -13,6 +13,8 @@ Pendientes por resolver antes de fijar detalles. Lo ya decidido está en [sesió
 ## Operación y tecnología
 - ¿Qué sistema de caja usa el piloto y tiene API o importación de ventas?
 - ¿Quién emite los comprobantes en el piloto: Hungría o el sistema de caja?
+- ¿Con qué se construyen las PWA del cliente y del mesero? Se decide junto con el sistema de diseño ([ADR 0013](adr/0013-stack-y-arquitectura.md)).
+- Los datos se alojan en GCP Santiago (Chile): ¿qué exige la Ley 29733 para la transferencia internacional de datos?
 
 ## Sala y Cocina
 - ¿Cuál es el límite por defecto de los descuentos del mesero?
@@ -84,3 +86,8 @@ Ver [ADR 0005](adr/0005-piloto-peru-pagos-y-comprobantes.md) y [ADR 0006](adr/00
 - Opciones y extras de plato, cartas por horario, IGV incluido sin recargo.
 - Módulos extra nuevos: Para llevar, Delivery por apps, Cupones y promociones, Reportes avanzados.
 - Reservas online en la fase 1; feedback privado; notificaciones por correo y SMS; sin API pública; soporte con acceso autorizado.
+
+2026-11-10 ([ADR 0013](adr/0013-stack-y-arquitectura.md)):
+- Backend en Python con Django y Channels, monolito modular con una app por módulo.
+- PostgreSQL con outbox transaccional y cola procrastinate; Redis solo para WebSockets.
+- GCP Santiago: Cloud Run, Cloud SQL, Memorystore, Cloud KMS y Secret Manager.

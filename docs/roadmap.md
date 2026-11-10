@@ -33,6 +33,7 @@ Los números son la cantidad de requisitos ([requisitos](plataforma/requisitos.m
 | Operación sin red | [ADR 0006](adr/0006-operacion-sin-red.md), R15 | ✔ |
 | Vía humana en cada paso | [principios](plataforma/principios.md), R16 | ✔ |
 | Privacidad (Ley 29733) | [preguntas abiertas](preguntas-abiertas.md) | ◐ decidido cumplirla; falta el cómo |
+| Stack y arquitectura | [ADR 0013](adr/0013-stack-y-arquitectura.md) | ◐ backend decidido; frontend pendiente |
 | Comparativa con TastyIgniter | [comparativa](comparativa-tastyigniter.md), [ADR 0012](adr/0012-alcance-frente-a-tastyigniter.md) | ✔ |
 
 ## Detalle por módulo
