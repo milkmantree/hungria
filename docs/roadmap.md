@@ -81,6 +81,9 @@ Los números son la cantidad de requisitos ([requisitos](plataforma/requisitos.m
 - **Hecho:** alcance (correo, Google o Apple, tarjeta guardada, historial y comprobantes) y contratos con Mesa digital y Pagos.
 - **Falta:** todo el diseño. Es futuro.
 
+## Frontend
+El stack del frontend está pendiente ([ADR 0013](adr/0013-stack-y-arquitectura.md)). Ruta planeada, sin empezar: [plan de frontend](frontend/plan.md).
+
 ## Orden sugerido
 1. **Recepción y reservas:** es fase 1 y casi no tiene diseño.
 2. **Cocina:** completa el paquete base Mesero.
