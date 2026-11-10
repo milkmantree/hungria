@@ -1,6 +1,6 @@
 # Módulo: Sala
 
-Estado: fase 1, diseño. Operación del mesero. Siempre se activa junto con Cocina ([ADR 0009](../adr/0009-licencias-y-activacion-de-modulos.md)). Modelo central: [sesión de mesa](../sesion-de-mesa.md).
+Estado: fase 1, diseño. Operación del mesero. Siempre se activa junto con Cocina ([ADR 0009](../../adr/0009-licencias-y-activacion-de-modulos.md)). Modelo central: [sesión de mesa](sesion-de-mesa.md).
 
 ## Responsabilidades
 - Abrir, fusionar, dividir y cerrar la **sesión de mesa**; cierre automático por inactividad.
@@ -14,7 +14,7 @@ Estado: fase 1, diseño. Operación del mesero. Siempre se activa junto con Coci
 - Enviar cada **cuenta cerrada al sistema de caja** del restaurante.
 
 ## Requisitos
-R2, R5, R7, R8, R9, R10, R11, R13, R21, R24, R25, R26, R31. Ver [requisitos](requisitos.md).
+R2, R5, R7, R8, R9, R10, R11, R13, R21, R24, R25, R26, R31. Ver [requisitos](../../plataforma/requisitos.md).
 
 ## Contratos
 | Con | Sala envía | Sala recibe |
@@ -27,4 +27,4 @@ R2, R5, R7, R8, R9, R10, R11, R13, R21, R24, R25, R26, R31. Ver [requisitos](req
 | Recepción y reservas | mesa liberada o por liberarse | grupo asignado a una mesa |
 | Sistema de caja externo | cuenta cerrada (ítems, montos, propina, medio de pago, comprobante si lo hay) | confirmación de recepción |
 
-Qué hace Sala cuando falta cada módulo opcional: [dependencias](dependencias.md#sala).
+Qué hace Sala cuando falta cada módulo opcional: [dependencias](../../plataforma/dependencias.md#sala).

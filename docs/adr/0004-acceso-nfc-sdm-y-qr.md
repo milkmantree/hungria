@@ -12,7 +12,7 @@ Hay que abrir la sesión de mesa sin fricción, pero evitando que alguien opere 
 - **Sin código corto de mesa.**
 - Salvaguarda opcional por restaurante: aviso al mesero de la zona en pedidos Directo vía QR.
 
-Detalle: [acceso a la mesa](../acceso-a-la-mesa.md).
+Detalle: [acceso a la mesa](../modulos/mesa-digital/acceso-a-la-mesa.md).
 
 ## Consecuencias
 - Requiere programar los stickers (activar SDM, claves propias) al instalarlos.

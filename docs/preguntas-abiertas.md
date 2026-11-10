@@ -1,6 +1,6 @@
 # Preguntas abiertas
 
-Pendientes por resolver antes de fijar detalles. Lo ya decidido está en [sesión de mesa](sesion-de-mesa.md), [modos de servicio](modos-de-servicio.md), [pagos y comprobantes](pagos-y-comprobantes.md) y los [ADR](adr/).
+Pendientes por resolver antes de fijar detalles. Lo ya decidido está en [sesión de mesa](modulos/sala/sesion-de-mesa.md), [modos de servicio](modulos/mesa-digital/modos-de-servicio.md), [pagos y comprobantes](modulos/pagos/pagos-y-comprobantes.md) y los [ADR](adr/).
 
 ## Pagos y legal
 - ¿Qué pasarela usa el restaurante piloto? Define el primer adaptador. Candidatas: Culqi, Izipay, Niubiz, Mercado Pago. Falta confirmar cuáles soportan Apple Pay y Google Pay.
@@ -25,7 +25,7 @@ Pendientes por resolver antes de fijar detalles. Lo ya decidido está en [sesió
 - ¿Se puede cambiar de paquete en cualquier momento o solo al renovar?
 
 ## Para el módulo Personal
-- ¿Qué información ve el mesero de cada grupo y cuántas alertas es razonable? El contrato con Sala (llamados y alertas por mesa o zona) ya está en [sala.md](modulos/sala.md).
+- ¿Qué información ve el mesero de cada grupo y cuántas alertas es razonable? El contrato con Sala (llamados y alertas por mesa o zona) ya está en [sala.md](modulos/sala/README.md).
 
 ## Resueltas
 Ver [ADR 0005](adr/0005-piloto-peru-pagos-y-comprobantes.md) y [ADR 0006](adr/0006-operacion-sin-red.md).
@@ -55,19 +55,19 @@ Ver [ADR 0005](adr/0005-piloto-peru-pagos-y-comprobantes.md) y [ADR 0006](adr/00
 - Licencia por local; varios locales por restaurante desde el diseño.
 - Venta por paquetes con módulos extra.
 - Atención al cliente se divide en Sala y Mesa digital; Sala y Cocina siempre juntos.
-- Lista de espera: nuevo módulo Recepción y reservas. Feedback: Mesa digital. Requisitos con códigos estables en [requisitos.md](modulos/requisitos.md).
+- Lista de espera: nuevo módulo Recepción y reservas. Feedback: Mesa digital. Requisitos con códigos estables en [requisitos.md](plataforma/requisitos.md).
 - Mesa digital sin Pagos solo en modo Acompañado.
 - Sin Pagos, el comprobante lo emite el sistema actual del restaurante.
 - El envío al sistema de caja lo hace Sala, con o sin Pagos.
 - Pagos sin Mesa digital: el mesero genera un QR o link de pago.
 - Sin Personal, los llamados y alertas llegan a todos los meseros del local.
-- Detalle: [dependencias y degradación](modulos/dependencias.md).
+- Detalle: [dependencias y degradación](plataforma/dependencias.md).
 
 2026-11-09 ([ADR 0010](adr/0010-eventos-y-comandos.md)):
 - Eventos y comandos entre módulos; nombres `modulo.entidad.verbo` en inglés.
 - Eventos con datos mínimos y sin datos personales; entrega al menos una vez con ID único.
 
-2026-11-09 ([máquinas de estado](modulos/estados.md)):
+2026-11-09 ([máquinas de estado](modulos/sala/estados.md)):
 - No se cancela un ítem que la cocina ya empezó; se cobra.
 - Llamado sin respuesta: se escala al encargado a los 3 min, configurable.
 - Plato demorado: tiempo fijo por local, configurable.

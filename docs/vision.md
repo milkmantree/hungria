@@ -7,7 +7,7 @@ Ofrecer herramientas digitales y de IoT para gestionar un restaurante de punta a
 Apalancar la tecnología lo máximo posible **sin poner en jaque la calidad de la atención**. Medimos la tecnología por el tiempo y la atención que devuelve al personal para el trato humano, no por cuánto reemplaza.
 
 ## Primer caso: restaurante casual
-Restaurante casual de 10 a 20 mesas en **Perú**. El cliente usa una **PWA** en español e inglés, sin instalar nada. Cada mesa tiene un sticker NFC y un QR propios para abrir una **sesión de mesa** en el celular del cliente. El restaurante elige entre dos [modos de servicio](modos-de-servicio.md): **Directo** (autonomía, pago por adelantado) o **Acompañado** (el mesero confirma, pago al final). El piloto soporta ambos ([ADR 0005](adr/0005-piloto-peru-pagos-y-comprobantes.md)).
+Restaurante casual de 10 a 20 mesas en **Perú**. El cliente usa una **PWA** en español e inglés, sin instalar nada. Cada mesa tiene un sticker NFC y un QR propios para abrir una **sesión de mesa** en el celular del cliente. El restaurante elige entre dos [modos de servicio](modulos/mesa-digital/modos-de-servicio.md): **Directo** (autonomía, pago por adelantado) o **Acompañado** (el mesero confirma, pago al final). El piloto soporta ambos ([ADR 0005](adr/0005-piloto-peru-pagos-y-comprobantes.md)).
 
 ## Alcance por fases
 | Fase | Foco | Estado |
@@ -16,7 +16,7 @@ Restaurante casual de 10 a 20 mesas en **Perú**. El cliente usa una **PWA** en 
 | 2+ | Módulos: pagos, cocina, personal, inventario, cuenta de cliente | planeado |
 
 ## Fase 1: alcance
-- Definir el modelo de [sesión de mesa](sesion-de-mesa.md) con grupos y el [acceso por NFC/QR](acceso-a-la-mesa.md).
+- Definir el modelo de [sesión de mesa](modulos/sala/sesion-de-mesa.md) con grupos y el [acceso por NFC/QR](modulos/mesa-digital/acceso-a-la-mesa.md).
 - Mapear el recorrido del cliente (llegada y acceso, pedido, servicio, cuenta y pago, cierre y comprobantes).
 - Definir, en cada paso, qué hace la tecnología y dónde el humano es obligatorio.
 - Derivar requisitos y contratos del módulo de atención al cliente.

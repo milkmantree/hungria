@@ -1,6 +1,6 @@
 # Prototipo navegable
 
-Pantallas en baja fidelidad de la PWA del cliente y la app del mesero, con el registro en vivo de los [eventos y comandos](modulos/eventos.md) que dispara cada acción.
+Pantallas en baja fidelidad de la PWA del cliente y la app del mesero, con el registro en vivo de los [eventos y comandos](plataforma/eventos.md) que dispara cada acción.
 
 - Enlace: https://claude.ai/artifact/SviQ9JW375tqVunknrRXKP (privado; se comparte desde el menú Compartir de la página).
 - Paquete que muestra: **Mesa digital** (Núcleo, Sala, Cocina, Mesa digital y Pagos), sin Personal ni Inventario.

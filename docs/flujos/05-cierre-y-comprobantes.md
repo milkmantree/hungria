@@ -62,4 +62,4 @@ Tiempo de entrega de comprobante, tasa de respuesta de feedback, tiempo de conta
 Sala (cierre de sesión, envío al sistema de caja); Mesa digital (feedback); Pagos y comprobantes; Cuenta de cliente (futuro, historial); Personal (limpieza, encargado).
 
 ## Futuro
-Historial de visitas y acumulador de boletas en la interfaz del cliente. Registrado en [pagos y comprobantes](../pagos-y-comprobantes.md); no se diseña en esta fase.
+Historial de visitas y acumulador de boletas en la interfaz del cliente. Registrado en [pagos y comprobantes](../modulos/pagos/pagos-y-comprobantes.md); no se diseña en esta fase.

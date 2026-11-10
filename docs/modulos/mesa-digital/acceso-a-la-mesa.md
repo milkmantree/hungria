@@ -1,6 +1,6 @@
 # Acceso a la mesa (NFC y QR)
 
-Cada mesa tiene un sticker NFC y un QR propios de esa mesa. Decisión: [ADR 0004](adr/0004-acceso-nfc-sdm-y-qr.md).
+Cada mesa tiene un sticker NFC y un QR propios de esa mesa. Decisión: [ADR 0004](../../adr/0004-acceso-nfc-sdm-y-qr.md).
 
 ## Dos vías, distinta garantía
 | | **NFC con SDM** | **QR** |
@@ -19,7 +19,7 @@ No se usa código corto de mesa (descartado).
 - Funciona con la lectura NFC nativa de Android y de iPhone reciente (sin app).
 - El contador es de 24 bits (unos 16 millones de lecturas), suficiente para una mesa.
 
-### Claves ([ADR 0011](adr/0011-claves-nfc.md))
+### Claves ([ADR 0011](../../adr/0011-claves-nfc.md))
 - Cada sticker tiene una **clave derivada** de la clave maestra del restaurante y del UID del sticker.
 - La **clave maestra** es una por restaurante y vive en un servicio de gestión de claves (KMS) que nunca la deja salir.
 - Nunca se versionan ni se escriben en documentos.
@@ -54,9 +54,9 @@ sequenceDiagram
 
 ## Límites de seguridad
 - La URL del toque **solo sirve para abrir o unirse**. La sesión ya abierta se protege con su propio token.
-- Cada comensal que entra recibe un nombre de animal; **vincular invitados es explícito** (ver [sesión de mesa](sesion-de-mesa.md)).
+- Cada comensal que entra recibe un nombre de animal; **vincular invitados es explícito** (ver [sesión de mesa](../sala/sesion-de-mesa.md)).
 - El mesero puede expulsar a un participante.
 
 ## Qué hacer si falla
 - Sticker dañado o sin lectura: usar el QR o pedir al mesero (vía humana siempre disponible).
-- Sin red: la validación NFC depende del servidor; si cae, el flujo pasa a pedido con el mesero ([ADR 0006](adr/0006-operacion-sin-red.md)).
+- Sin red: la validación NFC depende del servidor; si cae, el flujo pasa a pedido con el mesero ([ADR 0006](../../adr/0006-operacion-sin-red.md)).

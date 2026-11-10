@@ -10,13 +10,13 @@ Fase 1 — diseño de los flujos de atención al cliente para un restaurante cas
 
 ## Índice de documentación
 
-- [Visión](docs/vision.md) · [Principios de diseño](docs/principios.md) · [Glosario](docs/glosario.md)
+- [Visión](docs/vision.md) · [Principios de diseño](docs/plataforma/principios.md) · [Glosario](docs/plataforma/glosario.md)
 - Modelo de atención al cliente:
-  - [Sesión de mesa](docs/sesion-de-mesa.md) (grupos, titular, invitados)
-  - [Modos de servicio](docs/modos-de-servicio.md) (Directo y Acompañado)
-  - [Acceso a la mesa](docs/acceso-a-la-mesa.md) (NFC con SDM y QR)
-  - [Pagos y comprobantes](docs/pagos-y-comprobantes.md)
-- [Módulos](docs/modulos/README.md): [Núcleo](docs/modulos/nucleo.md) · [Sala](docs/modulos/sala.md) · [Mesa digital](docs/modulos/mesa-digital.md) · [Dependencias y degradación](docs/modulos/dependencias.md) · [Requisitos](docs/modulos/requisitos.md) · [Eventos y comandos](docs/modulos/eventos.md) · [Máquinas de estado](docs/modulos/estados.md) · [Mapa de avance](docs/modulos/avance.md)
+  - [Sesión de mesa](docs/modulos/sala/sesion-de-mesa.md) (grupos, titular, invitados)
+  - [Modos de servicio](docs/modulos/mesa-digital/modos-de-servicio.md) (Directo y Acompañado)
+  - [Acceso a la mesa](docs/modulos/mesa-digital/acceso-a-la-mesa.md) (NFC con SDM y QR)
+  - [Pagos y comprobantes](docs/modulos/pagos/pagos-y-comprobantes.md)
+- [Módulos](docs/modulos/README.md): [Núcleo](docs/modulos/nucleo/README.md) · [Sala](docs/modulos/sala/README.md) · [Mesa digital](docs/modulos/mesa-digital/README.md) · [Dependencias y degradación](docs/plataforma/dependencias.md) · [Requisitos](docs/plataforma/requisitos.md) · [Eventos y comandos](docs/plataforma/eventos.md) · [Máquinas de estado](docs/modulos/sala/estados.md) · [Mapa de avance](docs/roadmap.md)
 - [Flujos](docs/flujos/README.md)
   1. [Llegada y acceso](docs/flujos/01-llegada-y-acceso.md)
   2. [Mesa y pedido](docs/flujos/02-mesa-y-pedido.md)

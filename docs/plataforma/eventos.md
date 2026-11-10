@@ -5,11 +5,11 @@ Catálogo de mensajes entre módulos. Reglas: [ADR 0010](../adr/0010-eventos-y-c
 ## Prefijos de módulo
 | Prefijo | Módulo |
 |---|---|
-| `core` | [Núcleo](nucleo.md) |
-| `floor` | [Sala](sala.md) |
-| `tableside` | [Mesa digital](mesa-digital.md) |
+| `core` | [Núcleo](../modulos/nucleo/README.md) |
+| `floor` | [Sala](../modulos/sala/README.md) |
+| `tableside` | [Mesa digital](../modulos/mesa-digital/README.md) |
 | `kitchen` | Cocina |
-| `payments` | [Pagos y comprobantes](../pagos-y-comprobantes.md) |
+| `payments` | [Pagos y comprobantes](../modulos/pagos/pagos-y-comprobantes.md) |
 | `staff` | Personal |
 | `inventory` | Inventario |
 | `reception` | Recepción y reservas |

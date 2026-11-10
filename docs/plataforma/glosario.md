@@ -4,7 +4,7 @@
 |---|---|
 | Comensal | Persona que consume en el restaurante. |
 | Mesa | Unidad física de servicio; puede unirse o dividirse. |
-| Sesión de mesa | Contenedor digital de todo lo que ocurre en una mesa; se abre con NFC o QR. Ver [sesión de mesa](sesion-de-mesa.md). |
+| Sesión de mesa | Contenedor digital de todo lo que ocurre en una mesa; se abre con NFC o QR. Ver [sesión de mesa](../modulos/sala/sesion-de-mesa.md). |
 | Grupo | Titular más invitados vinculados, con cuenta y pago propios. Un comensal solo es un grupo de uno. |
 | Titular | Comensal que arma el pedido del grupo y paga por él. |
 | Invitado vinculado | Comensal que el titular aceptó explícitamente en su grupo. |
@@ -19,7 +19,7 @@
 | Sistema de caja | Software POS del restaurante que lleva ventas, caja y contabilidad. Hungría le envía las ventas liquidadas. Distinto del terminal POS físico de tarjetas. |
 | KDS | Pantalla de cocina que muestra las comandas y el estado de cada plato. |
 | Pago por fuera | Pago por un medio externo (POS, efectivo) que el mesero registra en el sistema. |
-| NFC / SDM | Sticker NFC que genera una URL única y firmada en cada lectura (Secure Dynamic Messaging). Ver [acceso a la mesa](acceso-a-la-mesa.md). |
+| NFC / SDM | Sticker NFC que genera una URL única y firmada en cada lectura (Secure Dynamic Messaging). Ver [acceso a la mesa](../modulos/mesa-digital/acceso-a-la-mesa.md). |
 | Comanda | Pedido enviado a cocina/barra, con ítems, notas y alergias. |
 | Ítem | Producto del menú dentro de un pedido. |
 | Opción de plato | Elección obligatoria de un ítem (por ejemplo el punto del lomo). |
@@ -44,5 +44,5 @@
 | Mesa digital | Módulo de autoservicio del cliente en la mesa (PWA, NFC/QR). |
 | Recepción y reservas | Módulo de lista de espera y, más adelante, reservas. |
 | Contrato | Interfaz (eventos y comandos) que un módulo expone o consume. |
-| Evento | Mensaje "pasó algo" que publica un módulo; puede no tener oyentes. Ver [eventos](modulos/eventos.md). |
+| Evento | Mensaje "pasó algo" que publica un módulo; puede no tener oyentes. Ver [eventos](eventos.md). |
 | Comando | Mensaje "haz esto" dirigido a un módulo activo, que responde con el resultado. |

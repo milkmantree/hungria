@@ -1,6 +1,6 @@
 # Flujos de atención al cliente
 
-Recorrido del cliente en cinco etapas, organizado en torno a la [sesión de mesa](../sesion-de-mesa.md) y los [modos de servicio](../modos-de-servicio.md).
+Recorrido del cliente en cinco etapas, organizado en torno a la [sesión de mesa](../modulos/sala/sesion-de-mesa.md) y los [modos de servicio](../modulos/mesa-digital/modos-de-servicio.md).
 
 1. [Llegada y acceso](01-llegada-y-acceso.md)
 2. [Mesa y pedido](02-mesa-y-pedido.md)
@@ -29,5 +29,5 @@ Cada archivo contiene, en este orden:
 ## Convenciones
 - Mermaid para diagramas; un flujo por archivo; nombres `NN-kebab-case.md` sin acentos.
 - Los pasos con ⚙️ son automáticos, los marcados con 🤝 son humanos obligatorios.
-- Las referencias a requisitos usan los códigos de [requisitos.md](../modulos/requisitos.md).
+- Las referencias a requisitos usan los códigos de [requisitos.md](../plataforma/requisitos.md).
 - Todo flujo debe indicar qué pasa en modo Directo y en modo Acompañado, y cómo funciona el pago por fuera.

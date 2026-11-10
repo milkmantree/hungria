@@ -40,7 +40,7 @@ flowchart TD
 - Expulsar a un participante no deseado. (R8)
 
 ## Señales digitales / IoT
-- Sticker NFC NTAG 424 DNA (SDM) y QR por mesa. Detalle en [acceso a la mesa](../acceso-a-la-mesa.md).
+- Sticker NFC NTAG 424 DNA (SDM) y QR por mesa. Detalle en [acceso a la mesa](../modulos/mesa-digital/acceso-a-la-mesa.md).
 - Estado de la mesa (libre, abierta, por limpiar).
 
 ## Fallas y excepciones

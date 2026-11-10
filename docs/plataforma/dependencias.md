@@ -1,6 +1,6 @@
 # Dependencias y degradación por módulo
 
-Qué necesita cada módulo, qué módulos aprovecha si están activos y qué hace cuando no lo están. Base: [ADR 0009](../adr/0009-licencias-y-activacion-de-modulos.md). Catálogo y paquetes: [módulos](README.md).
+Qué necesita cada módulo, qué módulos aprovecha si están activos y qué hace cuando no lo están. Base: [ADR 0009](../adr/0009-licencias-y-activacion-de-modulos.md). Catálogo y paquetes: [módulos](../modulos/README.md).
 
 ## Reglas generales
 - El **Núcleo** está siempre activo; ningún módulo necesita declararlo.

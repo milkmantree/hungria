@@ -15,7 +15,7 @@ Para cerrar el diseño de los flujos hacía falta fijar dónde opera el piloto, 
 - **Comprobantes:** se emiten mediante un **PSE/OSE** autorizado por SUNAT. Por defecto es **boleta**; si el cliente quiere **factura**, ingresa su RUC en la PWA al pagar.
 - **Cambios sobre pedidos ya pagados (Directo):** el monto queda como **saldo a favor** del grupo en la sesión. Si queda saldo al cerrar, se **reembolsa automáticamente** al medio de pago original.
 
-Detalle: [pagos y comprobantes](../pagos-y-comprobantes.md).
+Detalle: [pagos y comprobantes](../modulos/pagos/pagos-y-comprobantes.md).
 
 ## Consecuencias
 - Hay que elegir un proveedor PSE/OSE. La pasarela la trae cada restaurante (ADR 0008).

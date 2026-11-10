@@ -14,7 +14,7 @@ Una mesa suele tener varias personas con distintas formas de pagar: todos juntos
 - El mesero puede editar cualquier pedido y expulsar participantes.
 - La sesión cierra al liquidarse el último grupo.
 
-Detalle: [sesión de mesa](../sesion-de-mesa.md).
+Detalle: [sesión de mesa](../modulos/sala/sesion-de-mesa.md).
 
 ## Consecuencias
 - Cada comensal puede pagar a su ritmo y salir cuando quiera.

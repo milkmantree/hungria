@@ -1,7 +1,7 @@
 # 02 — Mesa y pedido
 
 ## Objetivo
-Que cada grupo arme su pedido con autonomía, sin errores y con las alergias siempre revisadas, y que el mesero use su tiempo en recomendar, no en anotar. El camino depende del [modo de servicio](../modos-de-servicio.md).
+Que cada grupo arme su pedido con autonomía, sin errores y con las alergias siempre revisadas, y que el mesero use su tiempo en recomendar, no en anotar. El camino depende del [modo de servicio](../modulos/mesa-digital/modos-de-servicio.md).
 
 ## Actores
 Titular, invitados vinculados, mesero, cocina, sistema.

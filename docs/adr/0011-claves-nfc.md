@@ -13,7 +13,7 @@ Los stickers NTAG 424 DNA firman cada lectura con una clave AES-128 ([ADR 0004](
 - **Sticker dañado, perdido o despegado:** el encargado lo **desactiva** en el Núcleo y se pide un reemplazo. Mientras tanto la mesa funciona con su QR. No hay rotación periódica; la clave cambia solo al reemplazar el sticker.
 - Nada de esto se versiona en el repo: ni claves, ni UIDs asociados a claves, ni configuraciones del KMS con secretos.
 
-Detalle: [acceso a la mesa](../acceso-a-la-mesa.md).
+Detalle: [acceso a la mesa](../modulos/mesa-digital/acceso-a-la-mesa.md).
 
 ## Consecuencias
 - Hungría necesita un puesto de programación (lector NFC y herramienta propia) y un proceso de envío de stickers a cada restaurante.

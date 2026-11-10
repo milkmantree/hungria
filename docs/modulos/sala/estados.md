@@ -1,6 +1,6 @@
 # Máquinas de estado
 
-Estados de las entidades de Sala, Mesa digital y Cocina. Los de la sesión y el grupo están en [sesión de mesa](../sesion-de-mesa.md). Cada cambio de estado se publica como evento ([eventos](eventos.md)).
+Estados de las entidades de Sala, Mesa digital y Cocina. Los de la sesión y el grupo están en [sesión de mesa](sesion-de-mesa.md). Cada cambio de estado se publica como evento ([eventos](../../plataforma/eventos.md)).
 
 ## Mesa (Núcleo)
 ```mermaid

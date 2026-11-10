@@ -1,6 +1,6 @@
 # Pagos y comprobantes
 
-Decisiones del piloto en Perú: [ADR 0005](adr/0005-piloto-peru-pagos-y-comprobantes.md).
+Decisiones del piloto en Perú: [ADR 0005](../../adr/0005-piloto-peru-pagos-y-comprobantes.md).
 
 ## Pago por grupo
 Cada grupo tiene su propia cuenta y paga por separado. El titular paga por sus invitados vinculados. Un plato compartido se carga a un solo grupo (un único pago).
@@ -12,7 +12,7 @@ Cada grupo tiene su propia cuenta y paga por separado. El titular paga por sus i
 | Efecto | El pago confirma el pedido y lo envía a cocina | El mesero ya confirmó el pedido antes; el pago cierra la cuenta |
 
 ## Medios de pago digitales
-Cada restaurante conecta **su propia cuenta con API** en una pasarela que opere en Perú; el dinero va directo a esa cuenta ([ADR 0008](adr/0008-pasarela-propia-de-cada-restaurante.md)). La PWA muestra los medios que esa pasarela soporte, entre:
+Cada restaurante conecta **su propia cuenta con API** en una pasarela que opere en Perú; el dinero va directo a esa cuenta ([ADR 0008](../../adr/0008-pasarela-propia-de-cada-restaurante.md)). La PWA muestra los medios que esa pasarela soporte, entre:
 - Tarjetas de crédito y débito.
 - Yape y Plin.
 - Apple Pay y Google Pay.
@@ -50,13 +50,13 @@ El destino lo elige el cliente:
 - Su **correo**.
 - **Físico**, si lo indica.
 
-Un comprobante por grupo, no por mesa. Cuando se liquida el último grupo, se cierra la sesión ([sesión de mesa](sesion-de-mesa.md)).
+Un comprobante por grupo, no por mesa. Cuando se liquida el último grupo, se cierra la sesión ([sesión de mesa](../sala/sesion-de-mesa.md)).
 
 ## Cobro sin Mesa digital
-Si el local tiene Pagos pero no Mesa digital, el mesero genera desde su dispositivo un **QR o link de pago** para el grupo y el cliente paga con su celular. Ver [dependencias](modulos/dependencias.md).
+Si el local tiene Pagos pero no Mesa digital, el mesero genera desde su dispositivo un **QR o link de pago** para el grupo y el cliente paga con su celular. Ver [dependencias](../../plataforma/dependencias.md).
 
 ## Envío al sistema de caja
-Lo hace el módulo **Sala**, con o sin Pagos: cada cuenta cerrada se envía al sistema de caja del restaurante ([ADR 0007](adr/0007-ventas-al-sistema-de-caja.md)). Con Pagos, el envío incluye el comprobante:
+Lo hace el módulo **Sala**, con o sin Pagos: cada cuenta cerrada se envía al sistema de caja del restaurante ([ADR 0007](../../adr/0007-ventas-al-sistema-de-caja.md)). Con Pagos, el envío incluye el comprobante:
 - Incluye grupo, ítems, montos, propina, medio de pago y comprobante. También los pagos por fuera registrados por el mesero.
 - Va en un solo sentido; el menú no se sincroniza desde la caja en esta fase.
 - **Un solo emisor por venta:** si Hungría emite el comprobante, la caja no lo vuelve a emitir, y viceversa.
