@@ -6,6 +6,8 @@ Pendientes por resolver antes de fijar detalles. Lo ya decidido está en [sesió
 - ¿Qué pasarela usa el restaurante piloto? Define el primer adaptador. Candidatas: Culqi, Izipay, Niubiz, Mercado Pago. Falta confirmar cuáles soportan Apple Pay y Google Pay.
 - ¿Qué proveedor PSE/OSE se usa para emitir comprobantes?
 - ¿Cómo se reparte la propina entre el personal? (módulo Personal)
+- ¿Puede cerrarse un grupo si su comprobante quedó en contingencia porque el PSE/OSE no respondió? Propuesta: sí; se reintenta en segundo plano y se envía al destino al aceptarse ([pagos](modulos/pagos/README.md#comprobante)).
+- Tiempos propuestos, por confirmar: el cobro en la PWA vence a los 15 min, el QR del mesero a los 30 min, y si no llega el webhook se consulta a la pasarela a los 2 min.
 - Privacidad: ya se decidió cumplir la Ley 29733 y su reglamento. Falta definir cómo: textos de consentimiento, registro del banco de datos y plazos de conservación.
 
 ## Operación y tecnología

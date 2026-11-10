@@ -36,7 +36,7 @@ flowchart TB
 | Delivery por apps | planeado | Pedidos de apps de delivery directo a Cocina | Sala |
 | Cupones y promociones | planeado | Códigos, happy hour, 2x1, por local y horario | Sala |
 | Reportes avanzados | planeado | Indicadores: ticket promedio, rotación, tiempos de cocina, platos más vendidos, comparación entre locales | Núcleo |
-| Pagos y comprobantes | fase 1, diseño | Pasarela del restaurante, QR o link de pago del mesero, comprobantes SUNAT, saldo a favor, propinas ([pagos](pagos/pagos-y-comprobantes.md)) | Sala |
+| [Pagos y comprobantes](pagos/README.md) | fase 1, diseño | Pasarela del restaurante, QR o link de pago del mesero, comprobantes SUNAT, saldo a favor, propinas | Sala |
 | Personal | planeado | Turnos, asignación de zonas, alertas al mesero, reparto de propinas | Sala |
 | Inventario | planeado | Existencias, consumo por plato, disponibilidad de la carta | Sala |
 | Cuenta de cliente | futuro | Registro con correo, login con Google o Apple, tarjeta guardada en la pasarela, historial y comprobantes | Pagos, Mesa digital |

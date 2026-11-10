@@ -1,6 +1,6 @@
 # Mapa de avance por módulo
 
-Qué está documentado de cada módulo, dónde está y qué falta. Corte: 2026-11-09. Se actualiza cada vez que se diseña un módulo. Catálogo y paquetes: [módulos](modulos/README.md).
+Qué está documentado de cada módulo, dónde está y qué falta. Corte: 2026-11-10. Se actualiza cada vez que se diseña un módulo. Catálogo y paquetes: [módulos](modulos/README.md).
 
 Leyenda: **✔** hecho · **◐** parcial o repartido en otros documentos · **—** no existe todavía · **n/a** no aplica.
 
@@ -10,7 +10,7 @@ Leyenda: **✔** hecho · **◐** parcial o repartido en otros documentos · **�
 | Núcleo | 1 | ✔ | ✔ 7 | ✔ | ✔ 6 | ◐ mesa | ◐ | n/a | ◐ carta | 4 |
 | Sala | 1 | ✔ | ✔ 13 | ✔ | ✔ 16 | ✔ pedido, llamado | ✔ 01–05 | ✔ | ✔ | 1 |
 | Mesa digital | 1 | ✔ | ✔ 11 | ✔ | ✔ 6 | ◐ sesión | ✔ 01–05 | ✔ | ✔ | 1 |
-| Pagos y comprobantes | 1 | ◐ | ✔ 4 | ◐ | ✔ 11 | ◐ grupo | ✔ 04–05 | ✔ | ◐ | 4 |
+| Pagos y comprobantes | 1 | ✔ | ✔ 4 | ✔ | ✔ 11 | ✔ pago, reembolso, comprobante | ✔ 04–05 | ✔ | ◐ | 5 |
 | Cocina | planeado | — | ✔ 4 | ◐ | ✔ 4 | ✔ ítem | ◐ 02–03 | ✔ | ◐ simulador | 0 |
 | Recepción y reservas | 1 | — | ✔ 2 | ◐ | ◐ 2 | — | ◐ 01 | n/a | — | 1 |
 | Personal | planeado | — | — | ◐ | ◐ 1 | — | — | ✔ | — | 2 |
@@ -53,9 +53,9 @@ Los números son la cantidad de requisitos ([requisitos](plataforma/requisitos.m
 - **Preguntas:** privacidad (compartida con el Núcleo).
 
 ### Pagos y comprobantes
-- **Hecho:** [pagos-y-comprobantes.md](modulos/pagos/pagos-y-comprobantes.md) (pago por grupo, medios, propina, pago por fuera, saldo a favor, SUNAT, cobro sin Mesa digital), [ADR 0005](adr/0005-piloto-peru-pagos-y-comprobantes.md), [ADR 0008](adr/0008-pasarela-propia-de-cada-restaurante.md), 11 eventos, flujos 04 y 05, cobro en la PWA dentro del prototipo.
-- **Falta:** documento en `modulos/` con responsabilidades y contratos propios; estados del pago y del comprobante; interfaz común de los adaptadores de pasarela; QR de pago del mesero en el prototipo (R23).
-- **Preguntas:** pasarela del piloto, proveedor PSE/OSE, quién emite en el piloto, reparto de propinas.
+- **Hecho:** [README del módulo](modulos/pagos/README.md) (responsabilidades, contratos, dinero en céntimos, estados del pago, reembolso y comprobante, saldo a favor, interfaces de los adaptadores de pasarela y de PSE/OSE, idempotencia y conciliación); reglas de negocio en [pagos-y-comprobantes.md](modulos/pagos/pagos-y-comprobantes.md); [ADR 0005](adr/0005-piloto-peru-pagos-y-comprobantes.md), [ADR 0008](adr/0008-pasarela-propia-de-cada-restaurante.md); 11 eventos; flujos 04 y 05; cobro en la PWA dentro del prototipo.
+- **Falta:** QR de pago del mesero en el prototipo (R23); confirmar los tiempos de vencimiento propuestos.
+- **Preguntas:** pasarela del piloto, proveedor PSE/OSE, quién emite en el piloto, reparto de propinas, cierre con comprobante en contingencia.
 
 ### Cocina
 - **Hecho:** requisitos (R4 estados, R25, R27, R28 comanda), estados del ítem, 4 eventos, contrato con Sala en [sala.md](modulos/sala/README.md), degradación, avance de platos en el simulador del prototipo.
@@ -81,8 +81,7 @@ Los números son la cantidad de requisitos ([requisitos](plataforma/requisitos.m
 - **Falta:** todo el diseño. Es futuro.
 
 ## Orden sugerido
-1. **Pagos y comprobantes:** pasar a `modulos/`, con estados y la interfaz de los adaptadores.
-2. **Recepción y reservas:** es fase 1 y casi no tiene diseño.
-3. **Cocina:** completa el paquete base Mesero.
-4. **Personal** e **Inventario.**
-5. Módulos extra y Cuenta de cliente.
+1. **Recepción y reservas:** es fase 1 y casi no tiene diseño.
+2. **Cocina:** completa el paquete base Mesero.
+3. **Personal** e **Inventario.**
+4. Módulos extra y Cuenta de cliente.

@@ -16,7 +16,7 @@ Fase 1 — diseño de los flujos de atención al cliente para un restaurante cas
   - [Modos de servicio](docs/modulos/mesa-digital/modos-de-servicio.md) (Directo y Acompañado)
   - [Acceso a la mesa](docs/modulos/mesa-digital/acceso-a-la-mesa.md) (NFC con SDM y QR)
   - [Pagos y comprobantes](docs/modulos/pagos/pagos-y-comprobantes.md)
-- [Módulos](docs/modulos/README.md): [Núcleo](docs/modulos/nucleo/README.md) · [Sala](docs/modulos/sala/README.md) · [Mesa digital](docs/modulos/mesa-digital/README.md) · [Dependencias y degradación](docs/plataforma/dependencias.md) · [Requisitos](docs/plataforma/requisitos.md) · [Eventos y comandos](docs/plataforma/eventos.md) · [Máquinas de estado](docs/modulos/sala/estados.md) · [Mapa de avance](docs/roadmap.md)
+- [Módulos](docs/modulos/README.md): [Núcleo](docs/modulos/nucleo/README.md) · [Sala](docs/modulos/sala/README.md) · [Mesa digital](docs/modulos/mesa-digital/README.md) · [Pagos y comprobantes](docs/modulos/pagos/README.md) · [Dependencias y degradación](docs/plataforma/dependencias.md) · [Requisitos](docs/plataforma/requisitos.md) · [Eventos y comandos](docs/plataforma/eventos.md) · [Máquinas de estado](docs/modulos/sala/estados.md) · [Mapa de avance](docs/roadmap.md)
 - [Flujos](docs/flujos/README.md)
   1. [Llegada y acceso](docs/flujos/01-llegada-y-acceso.md)
   2. [Mesa y pedido](docs/flujos/02-mesa-y-pedido.md)

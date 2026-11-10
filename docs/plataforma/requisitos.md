@@ -46,7 +46,7 @@ Lista única de requisitos, con el módulo responsable de cada uno. Los códigos
 | [Núcleo](../modulos/nucleo/README.md) | R4 (carta), R17 (traducciones), R28, R29, R30, R32, R33 |
 | [Sala](../modulos/sala/README.md) | R2, R5, R7, R8, R9, R10, R11, R13, R21, R24, R25, R26, R31 |
 | [Mesa digital](../modulos/mesa-digital/README.md) | R1, R2, R3, R4 (búsqueda), R6, R7, R9, R14, R17, R20, R34 |
-| [Pagos y comprobantes](../modulos/pagos/pagos-y-comprobantes.md) | R12, R18, R19, R23 |
+| [Pagos y comprobantes](../modulos/pagos/README.md) | R12, R18, R19, R23 |
 | Cocina | R4 (estados), R25, R27, R28 (comanda) |
 | Recepción y reservas | R22, R35 |
 | Todos | R15, R16 |
